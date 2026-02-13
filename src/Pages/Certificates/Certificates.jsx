@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { GraduationCap } from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 28 },
@@ -61,29 +62,42 @@ export const CertificatesSection = ({ id = 'certificates' }) => {
             variants={fadeInUp}
             className="grid gap-5"
           >
-            {certificatesData.map((cert) => (
+            {certificatesData.map((cert, index) => (
               <motion.div
                 key={cert.title}
-                whileHover={{ y: -4 }}
-                className="relative rounded-2xl border border-emerald-500/30 bg-slate-900/50 p-5 backdrop-blur-xl transition-shadow hover:shadow-[0_0_35px_-12px_rgba(16,185,129,0.35)]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ y: -6, scale: 1.01 }}
+                className="group relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/70 to-slate-950/70 p-5 backdrop-blur-xl transition-all hover:border-[#C9D98B]/50 hover:shadow-[0_0_40px_-12px_rgba(201,217,139,0.5)]"
               >
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9D98B]/0 to-transparent opacity-0 transition-all duration-500 group-hover:from-[#C9D98B]/10 group-hover:opacity-100" />
+                
                 {/* icon */}
-                <span className="absolute right-5 top-5 text-xl">🎓</span>
+                <motion.div 
+                  className="absolute right-5 top-5"
+                  whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.2 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <GraduationCap className="w-6 h-6 text-[#C9D98B] stroke-[2]" />
+                </motion.div>
 
-                <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
+                <p className="relative text-xs font-semibold uppercase tracking-wide text-emerald-300 transition-colors group-hover:text-[#C9D98B]">
                   {cert.date}
                 </p>
 
-                <p className="mt-1 text-lg font-semibold text-slate-50">
+                <p className="relative mt-1 text-lg font-semibold text-slate-50 transition-colors group-hover:text-[#C9D98B]">
                   {cert.title}
                 </p>
 
-                <p className="text-sm text-emerald-300">
+                <p className="relative text-sm text-emerald-300 transition-colors group-hover:text-[#C9D98B]">
                   {cert.provider}
                 </p>
 
-                <p className="mt-2 text-sm text-slate-300">
-                  Focus: <span className="text-slate-200">{cert.focus}</span>
+                <p className="relative mt-2 text-sm text-slate-300">
+                  Focus: <span className="text-slate-200 group-hover:text-[#C9D98B] transition-colors">{cert.focus}</span>
                 </p>
               </motion.div>
             ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import { Code, Brain, Eye, Cloud, BarChart3, Database, Layers, MessageSquare } from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 28 },
@@ -59,6 +60,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
           >
             <SkillCard
               title="Programming & Development"
+              icon={Code}
               skills={[
                 'Python', 'C', 'C++', 'Java', 'JavaScript', 'TypeScript',
                 'SQL', 'R', 'MATLAB', 'Scala', 'Go',
@@ -68,6 +70,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 
             <SkillCard
               title="Machine Learning & AI"
+              icon={Brain}
               skills={[
                 'Scikit-learn', 'TensorFlow', 'Keras', 'PyTorch',
                 'HuggingFace', 'XGBoost', 'Feature Engineering',
@@ -77,6 +80,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 
             <SkillCard
               title="Computer Vision"
+              icon={Eye}
               skills={[
                 'CNN', 'Vision Transformers', 'OpenCV', 'YOLO',
                 'MediaPipe', 'Detectron2', 'Image Segmentation',
@@ -86,6 +90,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 
             <SkillCard
               title="NLP & LLMs"
+              icon={MessageSquare}
               skills={[
                 'NLTK', 'spaCy', 'BERT', 'GPT',
                 'Transformers', 'RAG',
@@ -95,6 +100,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 
             <SkillCard
               title="Cloud & Deployment"
+              icon={Cloud}
               skills={[
                 'AWS', 'Google Cloud', 'Azure',
                 'SageMaker', 'Docker', 'Kubernetes', 'MLflow',
@@ -103,6 +109,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 
             <SkillCard
               title="Data Science & Tools"
+              icon={BarChart3}
               skills={[
                 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn',
                 'Tableau', 'Power BI', 'Jupyter',
@@ -113,6 +120,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 
             <SkillCard
               title="Databases & Big Data"
+              icon={Database}
               skills={[
                 'PostgreSQL', 'MongoDB', 'Redis',
                 'Hadoop', 'Spark', 'Elasticsearch',
@@ -121,6 +129,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 
             <SkillCard
               title="Vector Databases"
+              icon={Layers}
               skills={[
                 'ChromaDB', 'Pinecone', 'FAISS',
               ]}
@@ -132,27 +141,37 @@ export const SkillsSection = ({ id = 'skills' }) => {
   );
 };
 
-const SkillCard = ({ title, skills }) => (
+const SkillCard = ({ title, skills, icon: Icon }) => (
   <Motion.div
-    whileHover={{ y: -4 }}
-    className="rounded-2xl border border-emerald-500/30 bg-slate-900/50 p-5 backdrop-blur-xl transition-shadow hover:shadow-[0_0_40px_-12px_rgba(16,185,129,0.35)]"
+    whileHover={{ y: -4, scale: 1.02 }}
+    className="group relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/70 to-slate-950/70 p-5 backdrop-blur-xl transition-all hover:border-[#C9D98B]/50 hover:shadow-[0_0_40px_-12px_rgba(201,217,139,0.5)]"
   >
-    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
-      {title}
-    </p>
+    {/* Animated background gradient */}
+    <div className="absolute inset-0 bg-gradient-to-br from-[#C9D98B]/0 to-[#C9D98B]/0 transition-all duration-500 group-hover:from-[#C9D98B]/5 group-hover:to-transparent" />
+    
+    <div className="relative flex items-center justify-between mb-4">
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300 group-hover:text-[#C9D98B] transition-colors">
+        {title}
+      </p>
+      {Icon && (
+        <Motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.6 }}>
+          <Icon className="w-5 h-5 text-[#C9D98B] stroke-[2]" />
+        </Motion.div>
+      )}
+    </div>
 
     <Motion.div
       variants={container}
       initial="hidden"
       animate="show"
-      className="mt-4 flex flex-wrap gap-2"
+      className="relative mt-4 flex flex-wrap gap-2"
     >
       {skills.map((skill) => (
         <Motion.span
           key={skill}
           variants={badge}
-          whileHover={{ scale: 1.08 }}
-          className="cursor-default rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200"
+          whileHover={{ scale: 1.1, y: -2 }}
+          className="cursor-default rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200 transition-all hover:border-[#C9D98B]/50 hover:bg-[#C9D98B]/20 hover:text-[#C9D98B] hover:shadow-lg"
         >
           {skill}
         </Motion.span>

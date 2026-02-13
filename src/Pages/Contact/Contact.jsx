@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import { Phone, Star } from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 28 },
@@ -68,12 +69,12 @@ export const ContactSection = ({ id = 'contact' }) => {
                 label="Phone"
                 value="+880 1400 530 058"
                 href="tel:+8801400530058"
-                icon="📞"
+                icon={Phone}
               />
               <ContactItem
                 label="Preferred"
                 value="Email / LinkedIn"
-                icon="⭐"
+                icon={Star}
               />
             </div>
 
@@ -111,9 +112,9 @@ export const ContactSection = ({ id = 'contact' }) => {
   );
 };
 
-const ContactItem = ({ label, value, href, icon }) => (
+const ContactItem = ({ label, value, href, icon: Icon }) => (
   <div className="flex items-center gap-3 rounded-xl border border-emerald-500/25 bg-slate-950/60 px-4 py-3">
-    <span className="text-lg">{icon}</span>
+    <Icon className="w-5 h-5 text-[#C9D98B] stroke-[2]" />
     <div>
       <p className="text-xs uppercase tracking-wide text-emerald-300">
         {label}
