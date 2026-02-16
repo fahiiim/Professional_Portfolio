@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router';
+import logo from '../assets/logo.svg';
 
 const navItems = [
   { label: 'Home', to: '/' },
@@ -23,23 +24,32 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-black/95 backdrop-blur-lg shadow-lg">
       <div className="mx-auto max-w-7xl px-4 py-4">
         
-        {/* Desktop Nav - Centered */}
-        <div className="hidden lg:flex items-center justify-center gap-8">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                `${linkBase} ${isActive ? 'text-[#C9D98B]' : 'text-gray-300 hover:text-[#C9D98B]'}`
-              }
-            >
-              {item.label}
-            </NavLink>
-          ))}
+        {/* Desktop Nav - Logo left, Nav centered */}
+        <div className="hidden lg:flex items-center justify-between">
+          <NavLink to="/" className="flex items-center">
+            <img src={logo} alt="Logo" className="h-12 w-12 text-[#C9D98B]" style={{filter: 'brightness(0) saturate(100%) invert(89%) sepia(13%) saturate(683%) hue-rotate(24deg) brightness(92%) contrast(86%)'}} />
+          </NavLink>
+          <div className="flex items-center gap-8">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  `${linkBase} ${isActive ? 'text-[#C9D98B]' : 'text-gray-300 hover:text-[#C9D98B]'}`
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+          <div className="h-12 w-12"></div> {/* Spacer for balance */}
         </div>
 
-        {/* Mobile Toggle - Positioned at right */}
-        <div className="lg:hidden flex items-center justify-end">
+        {/* Mobile Nav - Logo left, Toggle right */}
+        <div className="lg:hidden flex items-center justify-between">
+          <NavLink to="/" className="flex items-center">
+            <img src={logo} alt="Logo" className="h-10 w-10" style={{filter: 'brightness(0) saturate(100%) invert(89%) sepia(13%) saturate(683%) hue-rotate(24deg) brightness(92%) contrast(86%)'}} />
+          </NavLink>
           <button
             className="h-10 w-10 rounded-md flex items-center justify-center hover:bg-white/10 transition"
             onClick={() => setOpen(!open)}
