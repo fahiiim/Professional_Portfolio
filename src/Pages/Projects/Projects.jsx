@@ -135,7 +135,7 @@ const projectsData = [
       'Structured pruning with minimal loss',
     ],
     tech: ['Keras', 'NLP', 'Scikit-learn'],
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
+    image: 'https://media.istockphoto.com/id/521226330/photo/smartphone-security-alert.webp?a=1&b=1&s=612x612&w=0&k=20&c=-KMJmwBlIaxekQUBHiNQFt_KkXrCej6ECSEhJ0sthuM=',
     link: 'https://github.com/fahiiim/Advanced-SMS-SPAM-Classification-STI-Client-Project',
     linkLabel: 'View Source',
   },
