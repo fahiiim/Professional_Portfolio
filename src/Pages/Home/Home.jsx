@@ -65,6 +65,13 @@ const Home = () => {
             >
               View Projects
             </a>
+            <a
+              href="/Fahim_Sarker_CV.pdf"
+              download
+              className="inline-flex items-center px-6 py-3 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-black hover:bg-gray-50 transition"
+            >
+              Download CV
+            </a>
           </div>
         </div>
 
