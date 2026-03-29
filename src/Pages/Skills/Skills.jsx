@@ -1,63 +1,30 @@
 import React from 'react';
-import { motion as Motion } from 'framer-motion';
 import { Code, Brain, Eye, Cloud, BarChart3, Database, Layers, MessageSquare } from 'lucide-react';
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-const container = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.05 },
-  },
-};
-
-const badge = {
-  hidden: { opacity: 0, scale: 0.85 },
-  show: { opacity: 1, scale: 1 },
-};
 
 export const SkillsSection = ({ id = 'skills' }) => {
   return (
     <section
       id={id}
-      className="relative border-b border-emerald-500/20 bg-slate-950 py-16 sm:py-20"
+      className="border-b border-gray-200 bg-white py-16 sm:py-20"
     >
-      {/* background glow */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.08),transparent_60%)]" />
-
-      <div className="relative mx-auto max-w-6xl px-4 lg:px-8">
-        <Motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={{
-            hidden: { opacity: 0 },
-            show: { opacity: 1, transition: { staggerChildren: 0.12 } },
-          }}
-          className="space-y-12"
-        >
+      <div className="mx-auto max-w-6xl px-4 lg:px-8">
+        <div className="space-y-12">
           {/* Header */}
-          <Motion.div variants={fadeInUp} className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-400">
+          <div className="space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gray-600">
               Skills
             </p>
-            <h2 className="max-w-3xl text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-emerald-300 sm:text-4xl">
+            <h2 className="max-w-3xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
               Full-stack AI, ML & MLOps toolkit
             </h2>
-            <p className="max-w-2xl text-sm text-slate-300 sm:text-[15px]">
+            <p className="max-w-2xl text-sm text-gray-600 sm:text-[15px]">
               I work across the entire AI lifecycle — from data and modeling to
               evaluation, deployment, and scalable production systems.
             </p>
-          </Motion.div>
+          </div>
 
           {/* Skill Grid */}
-          <Motion.div
-            variants={fadeInUp}
-            className="grid gap-6 sm:grid-cols-2"
-          >
+          <div className="grid gap-6 sm:grid-cols-2">
             <SkillCard
               title="Programming & Development"
               icon={Code}
@@ -134,50 +101,39 @@ export const SkillsSection = ({ id = 'skills' }) => {
                 'ChromaDB', 'Pinecone', 'FAISS',
               ]}
             />
-          </Motion.div>
-        </Motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 const SkillCard = ({ title, skills, icon: Icon }) => (
-  <Motion.div
-    whileHover={{ y: -4, scale: 1.02 }}
-    className="group relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/70 to-slate-950/70 p-5 backdrop-blur-xl transition-all hover:border-[#C9D98B]/50 hover:shadow-[0_0_40px_-12px_rgba(201,217,139,0.5)]"
+  <div
+    className="group relative overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-5 transition-all hover:border-gray-300 hover:shadow-md"
   >
-    {/* Animated background gradient */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[#C9D98B]/0 to-[#C9D98B]/0 transition-all duration-500 group-hover:from-[#C9D98B]/5 group-hover:to-transparent" />
-    
-    <div className="relative flex items-center justify-between mb-4">
-      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300 group-hover:text-[#C9D98B] transition-colors">
+    <div className="flex items-center justify-between mb-4">
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gray-600 group-hover:text-gray-900 transition-colors">
         {title}
       </p>
       {Icon && (
-        <Motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.6 }}>
-          <Icon className="w-5 h-5 text-[#C9D98B] stroke-[2]" />
-        </Motion.div>
+        <div>
+          <Icon className="w-5 h-5 text-gray-600" />
+        </div>
       )}
     </div>
 
-    <Motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className="relative mt-4 flex flex-wrap gap-2"
-    >
+    <div className="relative mt-4 flex flex-wrap gap-2">
       {skills.map((skill) => (
-        <Motion.span
+        <span
           key={skill}
-          variants={badge}
-          whileHover={{ scale: 1.1, y: -2 }}
-          className="cursor-default rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200 transition-all hover:border-[#C9D98B]/50 hover:bg-[#C9D98B]/20 hover:text-[#C9D98B] hover:shadow-lg"
+          className="cursor-default rounded-full border border-gray-300 bg-white px-3 py-1 text-xs font-medium text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-100 hover:text-gray-900"
         >
           {skill}
-        </Motion.span>
+        </span>
       ))}
-    </Motion.div>
-  </Motion.div>
+    </div>
+  </div>
 );
 
 export default SkillsSection;

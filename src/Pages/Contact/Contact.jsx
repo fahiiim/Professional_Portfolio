@@ -1,70 +1,48 @@
 import React from 'react';
-import { motion as Motion } from 'framer-motion';
 import { Phone, Star } from 'lucide-react';
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
 
 export const ContactSection = ({ id = 'contact' }) => {
   return (
     <section
       id={id}
-      className="relative border-b border-emerald-500/20 bg-slate-950 py-20"
+      className="border-b border-gray-200 bg-white py-20"
     >
-      {/* background glow */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.12),transparent_65%)]" />
 
-      <div className="relative mx-auto max-w-4xl px-4 lg:px-8">
-        <Motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={{
-            hidden: { opacity: 0 },
-            show: { opacity: 1, transition: { staggerChildren: 0.12 } },
-          }}
-          className="space-y-14"
-        >
+      <div className="mx-auto max-w-4xl px-4 lg:px-8">
+        <div className="space-y-14">
           {/* Header */}
-          <Motion.div variants={fadeInUp} className="space-y-4 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-400">
+          <div className="space-y-4 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gray-600">
               Contact
             </p>
-            <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-emerald-300 sm:text-4xl">
+            <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
               Let’s build meaningful AI systems together
             </h2>
-            <p className="mx-auto max-w-2xl text-sm text-slate-300 sm:text-[15px]">
+            <p className="mx-auto max-w-2xl text-sm text-gray-600 sm:text-[15px]">
               Open to AI engineering roles, research collaborations, and impactful
               projects in Medical AI, NLP, RAG systems, and Computer Vision.
             </p>
-          </Motion.div>
+          </div>
 
           {/* Main Card */}
-          <Motion.div
-            variants={fadeInUp}
-            whileHover={{ y: -4 }}
-            className="rounded-3xl border border-emerald-500/30 bg-slate-900/55 p-8 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(16,185,129,0.45)]"
-          >
-            {/* Primary CTA */}
+          <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 shadow-sm">
             <div className="mb-8 space-y-2 text-center">
-              <p className="text-sm text-slate-300">
+              <p className="text-sm text-gray-600">
                 Best way to reach me
               </p>
               <a
                 href="mailto:fahimsarker0805@gmail.com"
-                className="inline-block text-lg font-semibold text-emerald-300 hover:underline"
+                className="inline-block text-lg font-semibold text-gray-900 hover:underline"
               >
                 fahimsarker0805@gmail.com
               </a>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-gray-500">
                 I usually reply within 24 hours
               </p>
             </div>
 
             {/* Contact Details */}
-            <div className="mb-8 grid gap-4 text-sm text-slate-200 sm:grid-cols-2">
+            <div className="mb-8 grid gap-4 text-sm text-gray-600 sm:grid-cols-2">
               <ContactItem
                 label="Phone"
                 value="+880 1400 530 058"
@@ -97,34 +75,33 @@ export const ContactSection = ({ id = 'contact' }) => {
               />
             
             </div>
-          </Motion.div>
+          </div>
 
           {/* Closing line */}
-          <Motion.p
-            variants={fadeInUp}
-            className="text-center text-xs text-slate-400"
+          <p
+            className="text-center text-xs text-gray-600"
           >
             Always open to thoughtful conversations, ambitious ideas, and real-world impact.
-          </Motion.p>
-        </Motion.div>
+          </p>
+        </div>
       </div>
     </section>
   );
 };
 
 const ContactItem = ({ label, value, href, icon: Icon }) => (
-  <div className="flex items-center gap-3 rounded-xl border border-emerald-500/25 bg-slate-950/60 px-4 py-3">
-    <Icon className="w-5 h-5 text-[#C9D98B] stroke-[2]" />
+  <div className="flex items-center gap-3 rounded-lg border border-gray-300 bg-white px-4 py-3">
+    <Icon className="w-5 h-5 text-gray-600 stroke-[2]" />
     <div>
-      <p className="text-xs uppercase tracking-wide text-emerald-300">
+      <p className="text-xs uppercase tracking-wide text-gray-600">
         {label}
       </p>
       {href ? (
-        <a href={href} className="text-sm hover:underline">
+        <a href={href} className="text-sm text-gray-900 hover:text-gray-700 hover:underline">
           {value}
         </a>
       ) : (
-        <p className="text-sm">{value}</p>
+        <p className="text-sm text-gray-900">{value}</p>
       )}
     </div>
   </div>
@@ -135,10 +112,10 @@ const SocialLink = ({ name, handle, href }) => (
     href={href}
     target="_blank"
     rel="noreferrer"
-    className="flex items-center justify-between rounded-xl border border-emerald-500/30 bg-slate-950/60 px-5 py-4 transition hover:border-emerald-400 hover:shadow-[0_0_25px_-10px_rgba(16,185,129,0.35)]"
+    className="flex items-center justify-between rounded-lg border border-gray-300 bg-white px-5 py-4 transition hover:border-gray-400 hover:shadow-md"
   >
-    <span className="font-medium">{name}</span>
-    <span className="text-xs text-emerald-300">{handle}</span>
+    <span className="font-medium text-gray-900">{name}</span>
+    <span className="text-xs text-gray-600">{handle}</span>
   </a>
 );
 
