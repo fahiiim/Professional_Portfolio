@@ -7,6 +7,7 @@ import Experience from "../Pages/Experience/Experience";
 import Skills from "../Pages/Skills/Skills";
 import Contact from "../Pages/Contact/Contact";
 import Projects from "../Pages/Projects/Projects";
+import NeuroGebra from "../Pages/NeuroGebra/NeuroGebra";
 import Achievements from "../Pages/Achievements/Achievements";
 import Certificates from "../Pages/Certificates/Certificates";
 import Leadership from "../Pages/Leadership/Leadership";
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
          {
             path: "/projects",
             Component: Projects
+         },
+         {
+            path: "/neurogebra",
+            Component: NeuroGebra
          },
          {
             path:"/achievements",

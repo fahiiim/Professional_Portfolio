@@ -3,6 +3,18 @@ import { Megaphone, Bot, Calendar, Code2 } from 'lucide-react';
 
 const rolesData = [
   {
+    role: 'Enduring Member',
+    org: 'BASIS Students’ Forum – GUB Chapter',
+    period: 'LIFETIME',
+    icon: Calendar,
+  },
+  {
+    role: 'Executive Member',
+    org: 'BASIS Students’ Forum – GUB Chapter',
+    period: 'Oct 2023 — Jan 2025',
+    icon: Calendar,
+  },
+  {
     role: 'Information Secretary',
     org: 'GUB Computer Club',
     period: '2023 — 2024',
@@ -10,14 +22,14 @@ const rolesData = [
   },
   {
     role: 'Software Engineer',
-    org: 'GUB Robotics Club',
+    org: 'GUB Robotics Society',
     period: '2024',
     icon: Bot,
   },
   {
     role: 'Event Coordinator',
     org: 'BASIS Students’ Forum',
-    period: '2023 — Present',
+    period: '2023 — 2025',
     icon: Calendar,
   },
   {
@@ -76,6 +88,16 @@ export const LeadershipSection = ({ id = 'leadership' }) => {
                 <p className="relative text-sm text-gray-600">
                   {item.org}
                 </p>
+
+                {item.bullets && (
+                  <ul className="relative mt-3 space-y-1.5 text-sm text-gray-600">
+                    {item.bullets.map((point) => (
+                      <li key={point} className="leading-relaxed">
+                        • {point}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
