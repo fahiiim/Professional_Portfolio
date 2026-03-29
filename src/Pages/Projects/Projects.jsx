@@ -18,6 +18,7 @@ import {
 // Tech stack icon mapping
 const techIcons = {
   'PyTorch': SiPytorch,
+  'YOLOv8': SiPytorch,
   'Swin Transformer': SiPytorch, // Using PyTorch icon as fallback
   'XAI': SiTensorflow, // Using TensorFlow as AI framework fallback
   'LangChain': SiPython, // Using Python as fallback
@@ -34,9 +35,26 @@ const techIcons = {
   'TensorFlow': SiTensorflow,
   'FastAPI': SiFastapi,
   'AWS': SiAmazon,
+  'GCP': SiGooglecloud,
 };
 
 const projectsData = [
+  {
+    title: 'ViolaShield - Smart Traffic Violation Detection',
+    company: 'Computer Vision',
+    period: '2024',
+    description:
+      'Awarded as Best Project. Intelligent violation detection system using YOLOv8 for license plate recognition, vehicle detection, and non-helmet biker detection with automated fine generation.',
+    results: [
+      'YOLOv8-based detection pipeline',
+      'Automated license plate recognition',
+      'Email notification system integration',
+    ],
+    tech: ['PyTorch', 'YOLOv8', 'OpenAI API'],
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    link: 'https://drive.google.com/file/d/1VOHJBoVYmbouGIb7So12CcpkfN3KCWNn/view',
+    linkLabel: 'View Promo',
+  },
   {
     title: 'Skin Cancer Classification with Swin Transformer & XAI',
     company: 'Medical AI Research',
@@ -50,62 +68,88 @@ const projectsData = [
     ],
     tech: ['Swin Transformer', 'PyTorch', 'XAI'],
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
+    link: 'https://github.com/fahiiim',
+    linkLabel: 'View Source',
   },
   {
-    title: 'RAG-Based Legal Chatbot',
+    title: 'RAG-Based Legal Chatbot for Michigan State',
     company: 'LegalTech AI',
     period: '2024',
     description:
-      'Document-aware chatbot that retrieves and summarizes legal clauses with grounded answers.',
+      'Retrieval-Augmented-Generation system for Michigan State and Federal Law of USA with advanced NLP for article/section-wise chunking and query processing.',
     results: [
-      'Response time under 2 seconds',
-      'Accuracy improved by 45%',
-      'Serving 1000+ daily queries',
+      'RAG architecture with FAISS vectorstore',
+      'Article/Section-wise chunking',
+      'Sub-2 second response time',
     ],
     tech: ['LangChain', 'FAISS', 'OpenAI API'],
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop',
+    link: 'https://github.com/fahiiim/Legal-Chatbot',
+    linkLabel: 'View Source',
   },
   {
-    title: 'Bidirectional LSTM Sentiment Analysis',
-    company: 'NLP Research',
-    period: '2023',
+    title: 'Cattle Breed Classification & XAI',
+    company: 'Computer Vision',
+    period: '2024',
     description:
-      'Deep learning model for binary sentiment classification on IMDB movie reviews.',
+      'High-performance cow breed classification with rich explainability using Grad-CAM, t-SNE/PCA, and feature visualization.',
     results: [
-      '92% accuracy on test set',
-      'Real-time inference capability',
-      'Published research paper',
+      '95.19% accuracy (EfficientNet-B3, ResNet50)',
+      'Grad-CAM explainability visualizations',
+      'Feature importance analysis',
     ],
-    tech: ['Keras', 'BiLSTM', 'NLP'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+    tech: ['PyTorch', 'XAI', 'Keras'],
+    image: 'https://images.unsplash.com/photo-1552025157-25e1e33e1a0d?w=800&h=600&fit=crop',
+    link: 'https://github.com/fahiiim/Cattle-Breed-Classification-and-Enhance-Explainability-with-XAI/tree/main',
+    linkLabel: 'View Source',
   },
   {
-    title: 'OCR & Voice Module for Route App',
+    title: 'Route Processing from Documents & Images',
     company: 'Smart Transportation',
     period: '2023',
     description:
-      'AI modules for permit text extraction and voice-based route input.',
+      'OCR-based RIGHT ROUTE application module using Amazon Textract and OpenAI for permit document processing and voice-based route extraction.',
     results: [
-      '95% OCR accuracy on permits',
-      'Bilingual voice recognition',
-      'Integrated into production app',
+      'Amazon Textract OCR integration',
+      'Google Cloud Speech-to-Text for voice routes',
+      'Automated route mapping on Google Maps',
     ],
-    tech: ['Tesseract', 'Speech Recognition', 'Flask'],
+    tech: ['AWS', 'OpenAI API', 'GCP'],
     image: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=800&h=600&fit=crop',
+    link: 'https://github.com/fahiiim/Right-Route-App-OCR-Module',
+    linkLabel: 'View Source',
   },
   {
-    title: 'Advanced SMS Spam Classification',
+    title: 'SMS Spam Classification - Solicitor Stopper',
     company: 'CyberSecurity AI',
     period: '2023',
     description:
-      'Real-time fraud detection pipeline deployed for a production client.',
+      'Text classification model for mobile device using DistillBERT achieving 99.19% accuracy with 8-bit quantization and structured pruning.',
     results: [
-      '98.5% spam detection rate',
-      'Zero false positives in production',
-      'Processing 10K+ messages daily',
+      '99.19% spam detection accuracy',
+      '8-bit quantization support',
+      'Structured pruning with minimal loss',
     ],
-    tech: ['Scikit-learn', 'NLP', 'MLOps'],
+    tech: ['Keras', 'NLP', 'Scikit-learn'],
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
+    link: 'https://github.com/fahiiim/Advanced-SMS-SPAM-Classification-STI-Client-Project',
+    linkLabel: 'View Source',
+  },
+  {
+    title: 'Fine-Tuning Large Language Models',
+    company: 'NLP Research',
+    period: '2024',
+    description:
+      'LLM fine-tuning using LoRA/PEFT techniques with T5 model achieving 90%+ accuracy on IMDB dataset.',
+    results: [
+      '90%+ accuracy on IMDB dataset',
+      'LoRA parameter-efficient tuning',
+      'Production-ready model deployment',
+    ],
+    tech: ['Keras', 'OpenAI API', 'PyTorch'],
+    image: 'https://images.unsplash.com/photo-1620712014215-7b16992b4c1e?w=800&h=600&fit=crop',
+    link: 'https://github.com/fahiiim/Large-Language-Model-Fine-Tuning',
+    linkLabel: 'View Source',
   },
 ];
 
@@ -133,7 +177,7 @@ export const ProjectsSection = ({ id = 'projects' }) => {
 
           {/* Projects Grid */}
           <div className="grid gap-6 lg:grid-cols-2">
-            {projectsData.map((project, index) => (
+            {projectsData.map((project) => (
               <article
                 key={project.title}
                 className="group relative overflow-hidden rounded-lg border border-gray-200 bg-gray-50 transition-all hover:border-gray-300 hover:shadow-md"
@@ -202,12 +246,15 @@ export const ProjectsSection = ({ id = 'projects' }) => {
                       })}
                     </div>
 
-                    <button
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group/btn inline-flex items-center gap-1.5 rounded-lg bg-black px-3 py-1.5 text-xs font-semibold text-white transition-all hover:bg-gray-800 hover:shadow-md"
                     >
-                      View
+                      {project.linkLabel ?? 'View Source'}
                       <ArrowUpRight className="h-3 w-3 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </article>
