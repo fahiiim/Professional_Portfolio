@@ -3,16 +3,34 @@ import { GraduationCap } from 'lucide-react';
 
 const certificatesData = [
   {
-    title: 'Working with Hugging Face',
-    provider: 'DataCamp',
-    date: 'Sep 2025',
-    focus: 'Transformers · NLP · Open-source models',
+    title: 'Deep Learning Specialization',
+    provider: 'Kaggle',
+    date: '2025',
+    focus: 'Deep learning foundations · CNNs · Sequence models',
   },
   {
-    title: 'Developing LLM Applications with LangChain',
+    title: 'Large Language Models Concepts',
     provider: 'DataCamp',
-    date: 'Sep 2025',
-    focus: 'LangChain · RAG · LLM orchestration',
+    date: '2024',
+    focus: 'LLM fundamentals · Prompting · Generative AI workflows',
+  },
+  {
+    title: 'AI+ Prompt Engineer Level 1',
+    provider: 'AI CERTs',
+    date: '2025',
+    focus: 'Prompt design · Prompt evaluation · Applied AI use cases',
+  },
+  {
+    title: 'Supervised Learning with Scikit-Learn',
+    provider: 'DataCamp',
+    date: '2024',
+    focus: 'Classification · Regression · Model evaluation',
+  },
+  {
+    title: 'Deep Neural Networks with PyTorch',
+    provider: 'DataCamp',
+    date: '2025',
+    focus: 'PyTorch training loops · Optimization · Neural architectures',
   },
 ];
 
