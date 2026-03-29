@@ -103,7 +103,7 @@ const projectsData = [
       'Feature importance analysis',
     ],
     tech: ['PyTorch', 'XAI', 'Keras'],
-    image: 'https://images.unsplash.com/photo-1552025157-25e1e33e1a0d?w=800&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y293fGVufDB8fDB8fHww',
     link: 'https://github.com/fahiiim/Cattle-Breed-Classification-and-Enhance-Explainability-with-XAI/tree/main',
     linkLabel: 'View Source',
   },
