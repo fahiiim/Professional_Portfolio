@@ -72,48 +72,48 @@ const Home = () => {
 
       {/* Tech Stack Section */}
       <section className="border-b border-gray-200 bg-gray-50 py-12">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-semibold text-gray-600 mb-8">Tech Stack</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-70">
+          <div className="flex flex-wrap items-center justify-center gap-6 opacity-70">
             <div className="flex items-center gap-2">
-              <SiPytorch className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">PyTorch</span>
+              <SiPytorch className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">PyTorch</span>
             </div>
             <div className="flex items-center gap-2">
-              <SiTensorflow className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">TensorFlow</span>
+              <SiTensorflow className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">TensorFlow</span>
             </div>
             <div className="flex items-center gap-2">
-              <SiKeras className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">Keras</span>
+              <SiKeras className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">Keras</span>
             </div>
             <div className="flex items-center gap-2">
-              <SiOpenai className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">OpenAI</span>
+              <SiOpenai className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">OpenAI</span>
             </div>
             <div className="flex items-center gap-2">
-              <SiScikitlearn className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">Scikit-Learn</span>
+              <SiScikitlearn className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">Scikit-Learn</span>
             </div>
             <div className="flex items-center gap-2">
-              <SiPandas className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">Pandas</span>
+              <SiPandas className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">Pandas</span>
             </div>
             <div className="flex items-center gap-2">
-              <SiNumpy className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">NumPy</span>
+              <SiNumpy className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">NumPy</span>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">LangChain</span>
+              <Zap className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">LangChain</span>
             </div>
             <div className="flex items-center gap-2">
-              <Package className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">LangGraph</span>
+              <Package className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">LangGraph</span>
             </div>
             <div className="flex items-center gap-2">
-              <SiDocker className="h-6 w-6 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600">Docker</span>
+              <SiDocker className="h-7 w-7 text-gray-600" />
+              <span className="text-xs font-semibold text-gray-600">Docker</span>
             </div>
           </div>
         </div>
