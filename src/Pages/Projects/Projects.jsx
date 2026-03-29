@@ -46,7 +46,7 @@ const projectsData = [
   {
     title: 'ViolaShield - Smart Traffic Violation Detection',
     company: 'Computer Vision',
-    period: '2024',
+    period: 'Integrated Design Project',
     description:
       'Awarded as Best Project. Intelligent violation detection system using YOLOv8 for license plate recognition, vehicle detection, and non-helmet biker detection with automated fine generation.',
     results: [
@@ -62,7 +62,7 @@ const projectsData = [
   {
     title: 'Skin Cancer Classification with Swin Transformer & XAI',
     company: 'Medical AI Research',
-    period: '2024',
+    period: 'Thesis Work',
     description:
       'Clinically guided explainable AI framework achieving 96% accuracy for skin cancer detection.',
     results: [
@@ -78,7 +78,7 @@ const projectsData = [
   {
     title: 'RAG-Based Legal Chatbot for Michigan State',
     company: 'LegalTech AI',
-    period: '2024',
+    period: 'Client Project(Casezy)',
     description:
       'Retrieval-Augmented-Generation system for Michigan State and Federal Law of USA with advanced NLP for article/section-wise chunking and query processing.',
     results: [
@@ -94,7 +94,7 @@ const projectsData = [
   {
     title: 'Cattle Breed Classification & XAI',
     company: 'Computer Vision',
-    period: '2024',
+    period: 'High Accuracy & Explainability',
     description:
       'High-performance cow breed classification with rich explainability using Grad-CAM, t-SNE/PCA, and feature visualization.',
     results: [
@@ -110,7 +110,7 @@ const projectsData = [
   {
     title: 'Route Processing from Documents & Images',
     company: 'Smart Transportation',
-    period: '2023',
+    period: 'Client Project(Right Route App)',
     description:
       'OCR-based RIGHT ROUTE application module using Amazon Textract and OpenAI for permit document processing and voice-based route extraction.',
     results: [
@@ -124,9 +124,9 @@ const projectsData = [
     linkLabel: 'View Source',
   },
   {
-    title: 'SMS Spam Classification - Solicitor Stopper',
-    company: 'CyberSecurity AI',
-    period: '2023',
+    title: 'SMS Spam Classification',
+    company: 'Solicitor Stopper',
+    period: 'Client Project(Ryan Lloyd)',
     description:
       'Text classification model for mobile device using DistillBERT achieving 99.19% accuracy with 8-bit quantization and structured pruning.',
     results: [
@@ -142,7 +142,7 @@ const projectsData = [
   {
     title: 'Fine-Tuning Large Language Models',
     company: 'NLP Research',
-    period: '2024',
+    period: 'Research Project',
     description:
       'LLM fine-tuning using LoRA/PEFT techniques with T5 model achieving 90%+ accuracy on IMDB dataset.',
     results: [
@@ -158,7 +158,7 @@ const projectsData = [
   {
     title: 'End-to-End Kidney Disease Classification (MLflow + DVC)',
     company: 'MLOps Pipeline',
-    period: '2024',
+    period: 'Production-Grade Workflow',
     description:
       'Production-style MLOps project for kidney disease image classification with experiment tracking and dataset/model versioning.',
     results: [
