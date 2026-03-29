@@ -26,8 +26,18 @@ const achievementsData = [
   },
   {
     title: 'Finalist',
-    event: 'IUBAT, BUBT, NSU AI Hackathons',
-    year: '2024 – 2025',
+    event: 'IUBAT Presents Hackathon',
+    year: 'Dec 2024',
+  },
+  {
+    title: 'Finalist',
+    event: 'BUBT presents AI Competition',
+    year: 'Nov 2025',
+  },
+  {
+    title: 'Finalist',
+    event: 'NSU Presents FutureBuilders2025 (AI Hackathon)',
+    year: 'Dec 2025',
   },
 ];
 
