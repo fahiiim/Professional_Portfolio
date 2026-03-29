@@ -1,4 +1,5 @@
 import React from 'react';
+import { MapPin, Briefcase, Zap, BookOpen } from 'lucide-react';
 
 export const AboutSection = ({ id = 'about' }) => {
   return (
@@ -50,21 +51,28 @@ export const AboutSection = ({ id = 'about' }) => {
             </div>
 
             {/* Snapshot Card */}
-            <div className="rounded-lg border border-gray-200 bg-gray-50 p-6">
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-gray-700">
-                Snapshot
+            <div className="rounded-xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gray-900">
+                Quick Snapshot
               </h3>
-              <dl className="space-y-4 text-xs sm:text-sm">
-                <SnapshotRow label="Location" value="Dhaka, Bangladesh" />
+              <dl className="space-y-5">
+                <SnapshotRow 
+                  icon={MapPin}
+                  label="Location" 
+                  value="Dhaka, Bangladesh" 
+                />
                 <SnapshotRow
+                  icon={Briefcase}
                   label="Current role"
                   value="Junior AI Engineer · SparkTech Agency"
                 />
                 <SnapshotRow
+                  icon={Zap}
                   label="Focus areas"
                   value="Medical AI, XAI, NLP, Computer Vision, RAG, LLMs"
                 />
                 <SnapshotRow
+                  icon={BookOpen}
                   label="Currently learning"
                   value="Advanced LLM applications, scalable MLOps, multimodal reasoning"
                 />
@@ -77,10 +85,13 @@ export const AboutSection = ({ id = 'about' }) => {
   );
 };
 
-const SnapshotRow = ({ label, value }) => (
-  <div className="flex items-start justify-between gap-4">
-    <dt className="text-gray-600">{label}</dt>
-    <dd className="text-right text-gray-900">{value}</dd>
+const SnapshotRow = ({ icon: Icon, label, value }) => (
+  <div className="flex items-start gap-3">
+    <Icon className="h-5 w-5 text-gray-400 mt-0.5 flex-shrink-0" />
+    <div className="flex-1">
+      <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">{label}</dt>
+      <dd className="text-sm text-gray-900 font-medium mt-1">{value}</dd>
+    </div>
   </div>
 );
 
