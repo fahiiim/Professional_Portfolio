@@ -151,7 +151,7 @@ const projectsData = [
       'Production-ready model deployment',
     ],
     tech: ['Keras', 'OpenAI API', 'PyTorch'],
-    image: 'https://images.unsplash.com/photo-1620712014215-7b16992b4c1e?w=800&h=600&fit=crop',
+    image: 'https://media.istockphoto.com/id/2213677534/photo/large-language-model-with-ai-technology-user-working-on-laptop-in-llm-data-performrange.webp?a=1&b=1&s=612x612&w=0&k=20&c=qHUywCAe3UMj7ENsKlYjSKaCnfxXC0_AJr7pOcKBuWY=',
     link: 'https://github.com/fahiiim/Large-Language-Model-Fine-Tuning',
     linkLabel: 'View Source',
   },
