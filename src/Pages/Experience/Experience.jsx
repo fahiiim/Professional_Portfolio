@@ -46,16 +46,6 @@ export const ExperienceSection = ({ id = 'experience' }) => {
                   'Supported AI prototyping, experimentation, and data pipeline automation.',
                 ]}
               />
-
-              <ExperienceItem
-                title="Executive Member"
-                org="BASIS Students’ Forum – GUB Chapter"
-                period="Oct 2023 — Sep 2025"
-                bullets={[
-                  'Organized technical workshops and AI-focused community events.',
-                  'Built a collaborative environment for students exploring AI & ML technologies.',
-                ]}
-              />
             </div>
           </div>
         </div>
