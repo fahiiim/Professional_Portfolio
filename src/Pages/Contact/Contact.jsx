@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Star } from 'lucide-react';
+import { Phone, Star, Mail, Linkedin, Github, ExternalLink, Facebook, Instagram } from 'lucide-react';
+import { SiKaggle } from 'react-icons/si';
 
 export const ContactSection = ({ id = 'contact' }) => {
   return (
@@ -25,15 +26,16 @@ export const ContactSection = ({ id = 'contact' }) => {
           </div>
 
           {/* Main Card */}
-          <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 shadow-sm">
+          <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 via-white to-gray-100 p-8 shadow-sm sm:p-10">
             <div className="mb-8 space-y-2 text-center">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm font-medium text-gray-600">
                 Best way to reach me
               </p>
               <a
                 href="mailto:fahimsarker0805@gmail.com"
-                className="inline-block text-lg font-semibold text-gray-900 hover:underline"
+                className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-lg font-semibold text-gray-900 shadow-sm transition hover:border-gray-300 hover:shadow"
               >
+                <Mail className="h-5 w-5 text-gray-700" />
                 fahimsarker0805@gmail.com
               </a>
               <p className="text-xs text-gray-500">
@@ -42,7 +44,13 @@ export const ContactSection = ({ id = 'contact' }) => {
             </div>
 
             {/* Contact Details */}
-            <div className="mb-8 grid gap-4 text-sm text-gray-600 sm:grid-cols-2">
+            <div className="mb-8 grid gap-4 text-sm text-gray-600 sm:grid-cols-2 lg:grid-cols-3">
+              <ContactItem
+                label="Email"
+                value="fahimsarker0805@gmail.com"
+                href="mailto:fahimsarker0805@gmail.com"
+                icon={Mail}
+              />
               <ContactItem
                 label="Phone"
                 value="+880 1400 530 058"
@@ -57,23 +65,37 @@ export const ContactSection = ({ id = 'contact' }) => {
             </div>
 
             {/* Social Links */}
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <SocialLink
                 name="LinkedIn"
-                handle="/fahim153"
+                handle="LinkedIn-Fahim Sarker"
                 href="https://linkedin.com/in/fahim153"
+                icon={Linkedin}
               />
               <SocialLink
                 name="GitHub"
-                handle="/fahiiim"
+                handle="GitHub-Fahim Sarker"
                 href="https://github.com/fahiiim"
+                icon={Github}
               />
               <SocialLink
                 name="Kaggle"
-                handle="/fahimsarker"
+                handle="Kaggle-Fahim Sarker"
                 href="https://kaggle.com/fahimsarker"
+                icon={SiKaggle}
               />
-            
+              <SocialLink
+                name="Facebook"
+                handle="FahimSarkerMridul"
+                href="https://www.facebook.com/FahimSarkerMridul"
+                icon={Facebook}
+              />
+              <SocialLink
+                name="Instagram"
+                handle="@f_a_h_iii_m"
+                href="https://www.instagram.com/f_a_h_iii_m"
+                icon={Instagram}
+              />
             </div>
           </div>
 
@@ -90,8 +112,8 @@ export const ContactSection = ({ id = 'contact' }) => {
 };
 
 const ContactItem = ({ label, value, href, icon: Icon }) => (
-  <div className="flex items-center gap-3 rounded-lg border border-gray-300 bg-white px-4 py-3">
-    <Icon className="w-5 h-5 text-gray-600 stroke-[2]" />
+  <div className="flex items-center gap-3 rounded-xl border border-gray-300 bg-white px-4 py-3 shadow-sm transition hover:border-gray-400 hover:shadow">
+    <Icon className="w-5 h-5 text-gray-600" />
     <div>
       <p className="text-xs uppercase tracking-wide text-gray-600">
         {label}
@@ -107,15 +129,21 @@ const ContactItem = ({ label, value, href, icon: Icon }) => (
   </div>
 );
 
-const SocialLink = ({ name, handle, href }) => (
+const SocialLink = ({ name, handle, href, icon: Icon }) => (
   <a
     href={href}
     target="_blank"
     rel="noreferrer"
-    className="flex items-center justify-between rounded-lg border border-gray-300 bg-white px-5 py-4 transition hover:border-gray-400 hover:shadow-md"
+    className="group flex items-center justify-between rounded-xl border border-gray-300 bg-white px-5 py-4 transition hover:border-gray-400 hover:shadow-md"
   >
-    <span className="font-medium text-gray-900">{name}</span>
-    <span className="text-xs text-gray-600">{handle}</span>
+    <div className="flex items-center gap-3">
+      <Icon className="h-5 w-5 text-gray-600 transition-colors group-hover:text-gray-800" />
+      <span className="font-medium text-gray-900">{name}</span>
+    </div>
+    <div className="flex items-center gap-2">
+      <span className="text-xs text-gray-600">{handle}</span>
+      <ExternalLink className="h-3.5 w-3.5 text-gray-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+    </div>
   </a>
 );
 
