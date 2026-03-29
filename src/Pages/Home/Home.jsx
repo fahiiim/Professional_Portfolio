@@ -71,23 +71,50 @@ const Home = () => {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="border-b border-gray-200 bg-gray-50 py-16">
+      <section className="border-b border-gray-200 bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-gray-600 mb-2">Technology Stack</p>
-            <h2 className="text-2xl font-bold text-gray-900">Tools & Frameworks</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <TechStackItem icon={SiPytorch} label="PyTorch" />
-            <TechStackItem icon={SiTensorflow} label="TensorFlow" />
-            <TechStackItem icon={SiKeras} label="Keras" />
-            <TechStackItem icon={SiScikitlearn} label="Scikit-Learn" />
-            <TechStackItem icon={SiPandas} label="Pandas" />
-            <TechStackItem icon={SiNumpy} label="NumPy" />
-            <TechStackItem icon={SiOpenai} label="OpenAI" />
-            <ToolBadge icon={Zap} label="LangChain" />
-            <ToolBadge icon={Package} label="LangGraph" />
-            <TechStackItem icon={SiDocker} label="Docker" />
+          <p className="text-center text-sm font-semibold text-gray-600 mb-8">Tech Stack</p>
+          <div className="flex flex-wrap items-center justify-center gap-8 opacity-70">
+            <div className="flex items-center gap-2">
+              <SiPytorch className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">PyTorch</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SiTensorflow className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">TensorFlow</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SiKeras className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">Keras</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SiOpenai className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">OpenAI</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SiScikitlearn className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">Scikit-Learn</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SiPandas className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">Pandas</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SiNumpy className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">NumPy</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">LangChain</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Package className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">LangGraph</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SiDocker className="h-6 w-6 text-gray-600" />
+              <span className="text-sm font-semibold text-gray-600">Docker</span>
+            </div>
           </div>
         </div>
       </section>
@@ -114,19 +141,5 @@ const Home = () => {
     </main>
   );
 };
-
-const TechStackItem = ({ icon: Icon, label }) => (
-  <div className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-white transition-colors group">
-    <Icon className="h-8 w-8 text-gray-700 group-hover:text-gray-900 transition-colors" />
-    <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 text-center">{label}</span>
-  </div>
-);
-
-const ToolBadge = ({ icon: Icon, label }) => (
-  <div className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-white transition-colors group">
-    <Icon className="h-8 w-8 text-gray-700 group-hover:text-gray-900 transition-colors" />
-    <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 text-center">{label}</span>
-  </div>
-);
 
 export default Home;
