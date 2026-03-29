@@ -35,11 +35,11 @@ export const EducationSection = ({ id = 'education' }) => {
                   Green University of Bangladesh · Dhaka
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-wide text-gray-500">
-                  2022 — Present
+                  2022 — 2026
                 </p>
 
                 <ul className="mt-4 space-y-1.5 text-sm text-gray-600">
-                  <li>• CGPA: <span className="text-gray-900">3.25 / 4.00</span></li>
+                  <li>• CGPA: <span className="text-gray-900">3.30 / 4.00</span></li>
                   <li>• Specialization: AI & Machine Learning</li>
                   <li>
                     • Research: Medical AI, XAI, NLP, Computer Vision
