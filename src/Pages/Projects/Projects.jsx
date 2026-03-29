@@ -71,7 +71,7 @@ const projectsData = [
       'Deployed in 3 clinical settings',
     ],
     tech: ['Swin Transformer', 'PyTorch', 'XAI'],
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1676312754401-d97fe43c2c4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGVybWF0b2xvZ3l8ZW58MHx8MHx8fDA%3D',
     link: 'https://github.com/fahiiim',
     linkLabel: 'View Source',
   },
