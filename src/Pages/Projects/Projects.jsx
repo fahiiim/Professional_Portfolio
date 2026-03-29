@@ -12,7 +12,9 @@ import {
   SiNumpy,
   SiDocker,
   SiGooglecloud,
-  SiAmazon
+  SiAmazon,
+  SiMlflow,
+  SiDvc
 } from 'react-icons/si';
 
 // Tech stack icon mapping
@@ -32,6 +34,8 @@ const techIcons = {
   'Flask': SiFlask,
   'Scikit-learn': SiScikitlearn,
   'MLOps': SiDocker,
+  'MLflow': SiMlflow,
+  'DVC': SiDvc,
   'TensorFlow': SiTensorflow,
   'FastAPI': SiFastapi,
   'AWS': SiAmazon,
@@ -149,6 +153,22 @@ const projectsData = [
     tech: ['Keras', 'OpenAI API', 'PyTorch'],
     image: 'https://images.unsplash.com/photo-1620712014215-7b16992b4c1e?w=800&h=600&fit=crop',
     link: 'https://github.com/fahiiim/Large-Language-Model-Fine-Tuning',
+    linkLabel: 'View Source',
+  },
+  {
+    title: 'End-to-End Kidney Disease Classification (MLflow + DVC)',
+    company: 'MLOps Pipeline',
+    period: '2024',
+    description:
+      'Production-style MLOps project for kidney disease image classification with experiment tracking and dataset/model versioning.',
+    results: [
+      'Integrated MLflow for experiment tracking',
+      'Used DVC for reproducible data and model versioning',
+      'Built an end-to-end training and evaluation workflow',
+    ],
+    tech: ['MLflow', 'DVC', 'TensorFlow'],
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
+    link: 'https://github.com/fahiiim/end-to-end-kidney-disease-classification-MLflow-DVC',
     linkLabel: 'View Source',
   },
 ];
