@@ -124,7 +124,8 @@ const NeuroGebraSection = ({ id = 'neurogebra' }) => {
               A flagship framework I authored to make deep learning mathematically transparent, executable, and internationally useful.
             </h2>
             <p className="max-w-3xl text-sm text-gray-600 sm:text-[15px]">
-              NeuroGebra combines capabilities that do not exist together in one tool today: symbolic mathematics, numerical execution, trainability, diagnostics, education, and deployment bridges.
+              <strong className="font-semibold text-gray-900">Adopted by 8,000+ students and researchers worldwide</strong>{' '}
+              as a learning companion alongside PyTorch and TensorFlow. A flagship framework combining symbolic mathematics, numerical execution, trainability, diagnostics, education, and deployment bridges in one tool.
             </p>
           </div>
 
