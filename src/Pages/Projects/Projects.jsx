@@ -79,6 +79,7 @@ const projectsData = [
   },
   {
     title: 'Legal RAG Assistant (Casezy)',
+    priority: 2,
     company: 'LegalTech AI',
     period: 'Client Project(Casezy)',
     description:
@@ -90,8 +91,6 @@ const projectsData = [
     ],
     tech: ['LangChain', 'FAISS', 'OpenAI API'],
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop',
-    link: 'https://github.com/fahiiim/Legal-Chatbot',
-    linkLabel: 'View Source',
     liveLink: 'https://casezys.com',
     liveLinkLabel: 'Live Demo',
   },
@@ -113,6 +112,7 @@ const projectsData = [
   },
   {
     title: 'Right Route App',
+    priority: 1,
     company: 'Smart Transportation',
     period: 'Client Project(Right Route App)',
     description:
@@ -124,13 +124,12 @@ const projectsData = [
     ],
     tech: ['AWS', 'OpenAI API', 'GCP'],
     image: 'https://plus.unsplash.com/premium_vector-1725948286385-960183060815?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    link: 'https://github.com/fahiiim/Right-Route-App-OCR-Module',
-    linkLabel: 'View Source',
     liveLink: 'https://getrightroute.app',
     liveLinkLabel: 'Live Demo',
   },
   {
     title: 'Event-Driven Backend for an AI Fitness Storybook Platform',
+    priority: 3,
     company: 'Generative AI',
     period: 'Case Study',
     description:
@@ -142,6 +141,8 @@ const projectsData = [
     ],
     tech: ['FastAPI', 'PostgreSQL', 'AWS'],
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
+    liveLink: 'https://github.com/fahiiim/Case-Study-of-Daily-Storybook-App/blob/main/AI%20Storybook%20%26%20Fitness%20Platform%20-%20Case%20Study.pdf',
+    liveLinkLabel: 'Case Study',
   },
   {
     title: 'SMS Spam Classification',
@@ -193,6 +194,10 @@ const projectsData = [
   },
 ];
 
+const orderedProjects = [...projectsData].sort(
+  (first, second) => (first.priority ?? Number.MAX_SAFE_INTEGER) - (second.priority ?? Number.MAX_SAFE_INTEGER),
+);
+
 export const ProjectsSection = ({ id = 'projects' }) => {
   return (
     <section
@@ -217,7 +222,7 @@ export const ProjectsSection = ({ id = 'projects' }) => {
 
           {/* Projects Grid */}
           <div className="grid gap-6 lg:grid-cols-2">
-            {projectsData.map((project) => (
+            {orderedProjects.map((project) => (
               <article
                 key={project.title}
                 className="group relative overflow-hidden rounded-lg border border-gray-200 bg-gray-50 transition-all hover:border-gray-300 hover:shadow-md"
