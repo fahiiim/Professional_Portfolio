@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import App from "../App";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
@@ -10,7 +10,6 @@ import Projects from "../Pages/Projects/Projects";
 import NeuroGebra from "../Pages/NeuroGebra/NeuroGebra";
 import Achievements from "../Pages/Achievements/Achievements";
 import Certificates from "../Pages/Certificates/Certificates";
-import Leadership from "../Pages/Leadership/Leadership";
 
 
 
@@ -59,7 +58,7 @@ export const router = createBrowserRouter([
          },
          {
             path:"/leadership",
-            Component: Leadership
+            element: <Navigate to="/achievements" replace />
          }
     ]
   },
