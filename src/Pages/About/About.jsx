@@ -1,4 +1,5 @@
 import React from 'react';
+import { BriefcaseBusiness, Layers3, Rocket, Users } from 'lucide-react';
 
 export const AboutSection = ({ id = 'about' }) => {
   return (
@@ -12,6 +13,34 @@ export const AboutSection = ({ id = 'about' }) => {
             <h2 className="mt-5 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
               Engineering production AI from architecture to delivery.
             </h2>
+
+            <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-sm sm:p-6">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gray-700">
+                Professional Snapshot
+              </h3>
+              <dl className="mt-5 divide-y divide-gray-200">
+                <SnapshotItem
+                  icon={BriefcaseBusiness}
+                  label="Current role"
+                  value="Mid-Level AI Engineer · SparkTech Agency"
+                />
+                <SnapshotItem
+                  icon={Layers3}
+                  label="Core scope"
+                  value="AI systems, backend APIs, automation & MLOps"
+                />
+                <SnapshotItem
+                  icon={Rocket}
+                  label="Production delivery"
+                  value="10+ AI systems across RAG, OCR, NLP & CV"
+                />
+                <SnapshotItem
+                  icon={Users}
+                  label="Open-source reach"
+                  value="8,000+ NeuroGebra users worldwide"
+                />
+              </dl>
+            </div>
           </div>
 
           <div className="space-y-6 text-[15px] leading-7 text-gray-600">
@@ -33,5 +62,17 @@ export const AboutSection = ({ id = 'about' }) => {
     </section>
   );
 };
+
+const SnapshotItem = ({ icon, label, value }) => (
+  <div className="flex gap-3 py-4 first:pt-0 last:pb-0">
+    <div className="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600">
+      {React.createElement(icon, { 'aria-hidden': true, className: 'h-4 w-4' })}
+    </div>
+    <div>
+      <dt className="text-xs font-semibold uppercase tracking-wide text-gray-500">{label}</dt>
+      <dd className="mt-1 text-sm font-medium leading-5 text-gray-900">{value}</dd>
+    </div>
+  </div>
+);
 
 export default AboutSection;
