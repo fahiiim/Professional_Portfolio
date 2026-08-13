@@ -10,9 +10,8 @@ const navItems = [
   { label: 'Skills', to: '/skills' },
   { label: 'Projects', to: '/projects' },
   { label: 'NeuroGebra', to: '/neurogebra' },
-  { label: 'Achievements', to: '/achievements' },
+  { label: 'Recognition', to: '/achievements' },
   { label: 'Certificates', to: '/certificates' },
-  { label: 'Leadership', to: '/leadership' },
   { label: 'Contact', to: '/contact' },
 ];
 
