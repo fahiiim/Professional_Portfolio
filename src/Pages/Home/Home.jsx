@@ -65,7 +65,7 @@ const Home = () => {
 
       {/* Technology Strip */}
       <section aria-label="Core technologies" className="overflow-x-auto border-b border-gray-200 bg-gray-50 py-10">
-        <div className="mx-auto flex min-w-[1120px] max-w-[1280px] flex-nowrap items-center justify-between gap-6 px-8 lg:px-12">
+        <div className="mx-auto flex w-full min-w-[1280px] max-w-[1680px] flex-nowrap items-center justify-between gap-8 px-10 xl:px-16">
           {[
             [SiPytorch, 'PyTorch'],
             [SiTensorflow, 'TensorFlow'],
@@ -78,8 +78,8 @@ const Home = () => {
             [SiFastapi, 'FastAPI'],
             [SiDocker, 'Docker'],
           ].map(([icon, label]) => (
-            <div key={label} className="flex items-center gap-2.5 text-gray-500 transition-colors hover:text-gray-800">
-              {React.createElement(icon, { 'aria-hidden': true, className: 'h-9 w-9 flex-none' })}
+            <div key={label} className="flex items-center gap-3 whitespace-nowrap text-gray-500 transition-colors hover:text-gray-800">
+              {React.createElement(icon, { 'aria-hidden': true, className: 'h-10 w-10 flex-none' })}
               <span className="text-sm font-semibold">{label}</span>
             </div>
           ))}
