@@ -1,20 +1,15 @@
 import React from 'react';
-import { motion as Motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import ParticlesBackground from '../../components/ParticlesBackground';
-import AnimatedCounter from '../../components/AnimatedCounter';
-import { 
-  SiPytorch, 
-  SiTensorflow, 
-  SiOpenai, 
-  SiScikitlearn,
+import {
   SiDocker,
   SiKeras,
-  SiPostgresql,
+  SiNumpy,
+  SiOpenai,
   SiPandas,
-  SiNumpy
+  SiPytorch,
+  SiScikitlearn,
+  SiTensorflow,
 } from 'react-icons/si';
-import { Database, Zap, Package } from 'lucide-react';
+import { Package, Zap } from 'lucide-react';
 import { AboutSection } from '../About/About';
 import { EducationSection } from '../Education/Education';
 import { ExperienceSection } from '../Experience/Experience';
@@ -22,19 +17,8 @@ import { SkillsSection } from '../Skills/Skills';
 import { ProjectsSection } from '../Projects/Projects';
 import NeuroGebraSection from '../NeuroGebra/NeuroGebra';
 import { AchievementsSection } from '../Achievements/Achievements';
-import { LeadershipSection } from '../Leadership/Leadership';
 import { CertificatesSection } from '../Certificates/Certificates';
 import { ContactSection } from '../Contact/Contact';
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0 },
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.12 } },
-};
 
 const Home = () => {
   return (
@@ -46,7 +30,7 @@ const Home = () => {
             Md. Fahim Sarker Mridul
           </h1>
           <p className="text-xl text-gray-600 mb-2">
-            AI Engineer | ML Researcher | Problem Solver
+            Mid-Level AI Engineer | Python Developer | Building Production AI Systems
           </p>
           <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
             Building production-grade AI systems focused on Medical AI, Explainable AI, NLP, and Computer Vision.
@@ -78,64 +62,61 @@ const Home = () => {
 
       </section>
 
-      {/* Tech Stack Section */}
-      <section className="border-b border-gray-200 bg-gray-50 py-12">
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-gray-600 mb-8">Tech Stack</p>
-          <div className="flex flex-wrap items-center justify-center gap-6 opacity-70">
-            <div className="flex items-center gap-2">
-              <SiPytorch className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">PyTorch</span>
+      {/* Technology Strip */}
+      <section aria-label="Core technologies" className="border-b border-gray-200 bg-gray-50 py-10">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-6 px-4 sm:px-6 lg:px-8">
+          {[
+            [SiPytorch, 'PyTorch'],
+            [SiTensorflow, 'TensorFlow'],
+            [SiKeras, 'Keras'],
+            [SiOpenai, 'OpenAI'],
+            [SiScikitlearn, 'Scikit-Learn'],
+            [SiPandas, 'Pandas'],
+            [SiNumpy, 'NumPy'],
+            [Zap, 'LangChain'],
+            [Package, 'LangGraph'],
+            [SiDocker, 'Docker'],
+          ].map(([icon, label]) => (
+            <div key={label} className="flex items-center gap-2.5 text-gray-500 transition-colors hover:text-gray-800">
+              {React.createElement(icon, { 'aria-hidden': true, className: 'h-9 w-9 flex-none' })}
+              <span className="text-sm font-semibold">{label}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <SiTensorflow className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">TensorFlow</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <SiKeras className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">Keras</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <SiOpenai className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">OpenAI</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <SiScikitlearn className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">Scikit-Learn</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <SiPandas className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">Pandas</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <SiNumpy className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">NumPy</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Zap className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">LangChain</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Package className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">LangGraph</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <SiDocker className="h-7 w-7 text-gray-600" />
-              <span className="text-xs font-semibold text-gray-600">Docker</span>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* Sections */}
       <AboutSection id="about" />
+
+      {/* Selected Impact */}
+      <section aria-labelledby="impact-heading" className="border-b border-gray-200 bg-gray-50 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p id="impact-heading" className="mb-6 text-center text-sm font-semibold uppercase tracking-[0.3em] text-gray-600">
+            Selected Impact
+          </p>
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-gray-200 bg-gray-200 sm:grid-cols-3 lg:grid-cols-5">
+            {[
+              ['10+', 'Production AI Systems Shipped'],
+              ['8,000+', 'NeuroGebra Users'],
+              ['96%', 'Clinical Model Accuracy'],
+              ['<2s', 'RAG Latency'],
+              ['6th', 'Worldwide - Rover Challenge'],
+            ].map(([value, label]) => (
+              <div key={label} className="bg-white px-4 py-5 text-center">
+                <p className="text-2xl font-bold text-gray-900">{value}</p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-gray-600">{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <EducationSection id="education" />
       <ExperienceSection id="experience" />
       <SkillsSection id="skills" />
       <ProjectsSection id="projects" />
       <NeuroGebraSection id="neurogebra" />
       <AchievementsSection id="achievements" />
-      <LeadershipSection id="leadership" />
       <CertificatesSection id="certificates" />
       <ContactSection id="contact" />
 
