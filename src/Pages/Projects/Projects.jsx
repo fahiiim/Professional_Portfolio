@@ -14,7 +14,8 @@ import {
   SiGooglecloud,
   SiAmazon,
   SiMlflow,
-  SiDvc
+  SiDvc,
+  SiPostgresql
 } from 'react-icons/si';
 
 // Tech stack icon mapping
@@ -40,6 +41,7 @@ const techIcons = {
   'FastAPI': SiFastapi,
   'AWS': SiAmazon,
   'GCP': SiGooglecloud,
+  'PostgreSQL': SiPostgresql,
 };
 
 const projectsData = [
@@ -76,20 +78,22 @@ const projectsData = [
     linkLabel: 'View Source',
   },
   {
-    title: 'RAG-Based Legal Chatbot for Michigan State',
+    title: 'Legal RAG Assistant (Casezy)',
     company: 'LegalTech AI',
     period: 'Client Project(Casezy)',
     description:
-      'Retrieval-Augmented-Generation system for Michigan State and Federal Law of USA with advanced NLP for article/section-wise chunking and query processing.',
+      'Production-grade legal assistant for U.S. Federal and Michigan State law, using semantic retrieval and LLM-based reasoning with article- and section-level indexing.',
     results: [
       'RAG architecture with FAISS vectorstore',
-      'Article/Section-wise chunking',
-      'Sub-2 second response time',
+      'Article/section-wise chunking',
+      'Sub-2-second response time',
     ],
     tech: ['LangChain', 'FAISS', 'OpenAI API'],
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop',
     link: 'https://github.com/fahiiim/Legal-Chatbot',
     linkLabel: 'View Source',
+    liveLink: 'https://casezys.com',
+    liveLinkLabel: 'Live Demo',
   },
   {
     title: 'Cattle Breed Classification & XAI',
@@ -108,11 +112,11 @@ const projectsData = [
     linkLabel: 'View Source',
   },
   {
-    title: 'Route Processing from Documents & Images',
+    title: 'Right Route App',
     company: 'Smart Transportation',
     period: 'Client Project(Right Route App)',
     description:
-      'OCR-based RIGHT ROUTE application module using Amazon Textract and OpenAI for permit document processing and voice-based route extraction.',
+      'OCR-based route-processing pipeline for the Right Route App in the USA, using Amazon Textract and OpenAI for automated permit-document and voice-based route extraction.',
     results: [
       'Amazon Textract OCR integration',
       'Google Cloud Speech-to-Text for voice routes',
@@ -122,6 +126,22 @@ const projectsData = [
     image: 'https://plus.unsplash.com/premium_vector-1725948286385-960183060815?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: 'https://github.com/fahiiim/Right-Route-App-OCR-Module',
     linkLabel: 'View Source',
+    liveLink: 'https://getrightroute.app',
+    liveLinkLabel: 'Live Demo',
+  },
+  {
+    title: 'Event-Driven Backend for an AI Fitness Storybook Platform',
+    company: 'Generative AI',
+    period: 'Case Study',
+    description:
+      'Architected a scalable, event-driven backend for an AI-powered fitness storybook platform using FastAPI, PostgreSQL, and AWS (ECS, SQS, S3, Bedrock), decoupling heavy AI workloads from the main API to eliminate timeouts and improve reliability.',
+    results: [
+      'Event-driven microservices architecture',
+      'AWS Bedrock for generative content',
+      'Eliminated API timeouts under heavy AI load',
+    ],
+    tech: ['FastAPI', 'PostgreSQL', 'AWS'],
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
   },
   {
     title: 'SMS Spam Classification',
@@ -266,15 +286,30 @@ export const ProjectsSection = ({ id = 'projects' }) => {
                       })}
                     </div>
 
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/btn inline-flex items-center gap-1.5 rounded-lg bg-black px-3 py-1.5 text-xs font-semibold text-white transition-all hover:bg-gray-800 hover:shadow-md"
-                    >
-                      {project.linkLabel ?? 'View Source'}
-                      <ArrowUpRight className="h-3 w-3 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                    </a>
+                    <div className="flex flex-wrap justify-end gap-2">
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/btn inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-900 transition-all hover:border-gray-400 hover:bg-gray-100"
+                        >
+                          {project.linkLabel ?? 'View Source'}
+                          <ArrowUpRight className="h-3 w-3 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                        </a>
+                      )}
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/btn inline-flex items-center gap-1.5 rounded-lg bg-black px-3 py-1.5 text-xs font-semibold text-white transition-all hover:bg-gray-800 hover:shadow-md"
+                        >
+                          {project.liveLinkLabel ?? 'Live Demo'}
+                          <ArrowUpRight className="h-3 w-3 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </article>
