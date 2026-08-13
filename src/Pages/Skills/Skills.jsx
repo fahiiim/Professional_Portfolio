@@ -54,32 +54,31 @@ const skillGroups = [
 ];
 
 const badgeStyles = [
-  'border-violet-400/35 bg-violet-400/15 text-violet-100',
-  'border-cyan-400/35 bg-cyan-400/15 text-cyan-100',
-  'border-emerald-400/35 bg-emerald-400/15 text-emerald-100',
-  'border-amber-400/35 bg-amber-400/15 text-amber-100',
-  'border-blue-400/35 bg-blue-400/15 text-blue-100',
-  'border-rose-400/35 bg-rose-400/15 text-rose-100',
+  'border-violet-200 bg-violet-50 text-violet-800',
+  'border-cyan-200 bg-cyan-50 text-cyan-800',
+  'border-emerald-200 bg-emerald-50 text-emerald-800',
+  'border-amber-200 bg-amber-50 text-amber-800',
+  'border-blue-200 bg-blue-50 text-blue-800',
+  'border-rose-200 bg-rose-50 text-rose-800',
 ];
 
 export const SkillsSection = ({ id = 'skills' }) => {
   return (
-    <section id={id} className="border-b border-slate-800 bg-[#0d1117] py-16 text-white sm:py-20">
+    <section id={id} className="border-b border-gray-200 bg-white py-16 text-gray-900 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mb-12">
-          <p className="font-mono text-sm font-bold uppercase tracking-[0.18em] text-violet-400">
-            <span aria-hidden="true" className="mr-2 inline-block h-3 w-3 bg-violet-500" />
-            Tech Stack & Skills
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gray-600">
+            Skills
           </p>
-          <h2 className="mt-5 max-w-4xl text-3xl font-bold leading-tight text-white sm:text-4xl">
+          <h2 className="mt-5 max-w-4xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
             AI, backend, automation & production engineering
           </h2>
-          <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-400 sm:text-[15px]">
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-gray-600 sm:text-[15px]">
             I build complete AI products across modeling, backend APIs, automation and web scraping, data pipelines, cloud infrastructure, and production deployment.
           </p>
         </div>
 
-        <div className="overflow-hidden border border-slate-700 bg-slate-800 sm:grid sm:grid-cols-2">
+        <div className="overflow-hidden rounded-xl border border-gray-200 bg-gray-200 shadow-sm sm:grid sm:grid-cols-2">
           {skillGroups.map((group, groupIndex) => (
             <SkillPanel key={group.title} group={group} groupIndex={groupIndex} />
           ))}
@@ -90,14 +89,14 @@ export const SkillsSection = ({ id = 'skills' }) => {
 };
 
 const SkillPanel = ({ group, groupIndex }) => (
-  <article className="border-b border-slate-700 bg-[#0d1117] p-5 last:border-b-0 sm:min-h-44 sm:border-r sm:[&:nth-child(even)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:p-6">
+  <article className="border-b border-gray-200 bg-gray-50 p-5 last:border-b-0 sm:min-h-44 sm:border-r sm:[&:nth-child(even)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:p-6">
     <div className="mb-5 flex items-center justify-between gap-4">
-      <h3 className="rounded bg-slate-800 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wide text-slate-100">
+      <h3 className="rounded bg-gray-200 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wide text-gray-800">
         // {group.title}
       </h3>
       {React.createElement(group.icon, {
         'aria-hidden': true,
-        className: 'h-5 w-5 flex-none text-slate-500',
+        className: 'h-5 w-5 flex-none text-gray-500',
       })}
     </div>
     <div className="flex flex-wrap gap-2">
