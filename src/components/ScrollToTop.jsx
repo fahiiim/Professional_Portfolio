@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
 
 const ScrollToTop = () => {
@@ -29,17 +29,18 @@ const ScrollToTop = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
+        <Motion.button
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-[#C9D98B] to-emerald-400 shadow-lg shadow-[#C9D98B]/30 transition-all hover:scale-110 hover:shadow-xl hover:shadow-[#C9D98B]/40"
+          aria-label="Scroll to top"
+          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-gray-700 bg-gray-900 shadow-lg shadow-black/20 transition-colors hover:bg-black hover:shadow-xl"
           whileHover={{ y: -4 }}
           whileTap={{ scale: 0.9 }}
         >
-          <ArrowUp className="h-5 w-5 text-slate-950 stroke-[2.5]" />
-        </motion.button>
+          <ArrowUp className="h-5 w-5 text-white stroke-[2.5]" />
+        </Motion.button>
       )}
     </AnimatePresence>
   );
