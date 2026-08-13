@@ -1,7 +1,9 @@
 import React from 'react';
 import {
   SiDocker,
+  SiFastapi,
   SiKeras,
+  SiLangchain,
   SiNumpy,
   SiOpenai,
   SiPandas,
@@ -9,7 +11,6 @@ import {
   SiScikitlearn,
   SiTensorflow,
 } from 'react-icons/si';
-import { Package, Zap } from 'lucide-react';
 import { AboutSection } from '../About/About';
 import { EducationSection } from '../Education/Education';
 import { ExperienceSection } from '../Experience/Experience';
@@ -63,8 +64,8 @@ const Home = () => {
       </section>
 
       {/* Technology Strip */}
-      <section aria-label="Core technologies" className="border-b border-gray-200 bg-gray-50 py-10">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-6 px-4 sm:px-6 lg:px-8">
+      <section aria-label="Core technologies" className="overflow-x-auto border-b border-gray-200 bg-gray-50 py-10">
+        <div className="mx-auto flex min-w-[1120px] max-w-[1280px] flex-nowrap items-center justify-between gap-6 px-8 lg:px-12">
           {[
             [SiPytorch, 'PyTorch'],
             [SiTensorflow, 'TensorFlow'],
@@ -73,8 +74,8 @@ const Home = () => {
             [SiScikitlearn, 'Scikit-Learn'],
             [SiPandas, 'Pandas'],
             [SiNumpy, 'NumPy'],
-            [Zap, 'LangChain'],
-            [Package, 'LangGraph'],
+            [SiLangchain, 'LangChain'],
+            [SiFastapi, 'FastAPI'],
             [SiDocker, 'Docker'],
           ].map(([icon, label]) => (
             <div key={label} className="flex items-center gap-2.5 text-gray-500 transition-colors hover:text-gray-800">
