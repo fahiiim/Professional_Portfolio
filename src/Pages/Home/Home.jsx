@@ -1,10 +1,12 @@
 import React from 'react';
 import {
+  SiAmazonwebservices,
   SiDocker,
   SiFastapi,
   SiKeras,
   SiLangchain,
   SiNumpy,
+  SiN8N,
   SiOpenai,
   SiPandas,
   SiPytorch,
@@ -65,22 +67,28 @@ const Home = () => {
 
       {/* Technology Strip */}
       <section aria-label="Core technologies" className="overflow-x-auto border-b border-gray-200 bg-gray-50 py-10">
-        <div className="mx-auto flex w-full min-w-[1280px] max-w-[1680px] flex-nowrap items-center justify-between gap-8 px-10 xl:px-16">
+        <div className="mx-auto flex w-full min-w-[1720px] flex-nowrap items-center justify-between gap-8 px-10 xl:px-14">
           {[
-            [SiPytorch, 'PyTorch'],
-            [SiTensorflow, 'TensorFlow'],
-            [SiKeras, 'Keras'],
-            [SiOpenai, 'OpenAI'],
-            [SiScikitlearn, 'Scikit-Learn'],
-            [SiPandas, 'Pandas'],
-            [SiNumpy, 'NumPy'],
-            [SiLangchain, 'LangChain'],
-            [SiFastapi, 'FastAPI'],
-            [SiDocker, 'Docker'],
-          ].map(([icon, label]) => (
+            [SiPytorch, 'PyTorch', '#EE4C2C'],
+            [SiTensorflow, 'TensorFlow', '#FF6F00'],
+            [SiKeras, 'Keras', '#D00000'],
+            [SiOpenai, 'OpenAI', '#000000'],
+            [SiScikitlearn, 'Scikit-Learn', '#F7931E'],
+            [SiPandas, 'Pandas', '#150458'],
+            [SiNumpy, 'NumPy', '#4D77CF'],
+            [SiLangchain, 'LangChain', '#1C3C3C'],
+            [SiFastapi, 'FastAPI', '#009688'],
+            [SiAmazonwebservices, 'AWS', '#FF9900'],
+            [SiN8N, 'n8n', '#EA4B71'],
+            [SiDocker, 'Docker', '#2496ED'],
+          ].map(([icon, label, brandColor]) => (
             <div key={label} className="flex items-center gap-3 whitespace-nowrap text-gray-500 transition-colors hover:text-gray-800">
-              {React.createElement(icon, { 'aria-hidden': true, className: 'h-10 w-10 flex-none' })}
-              <span className="text-sm font-semibold">{label}</span>
+              {React.createElement(icon, {
+                'aria-hidden': true,
+                className: 'h-10 w-10 flex-none',
+                style: { color: brandColor },
+              })}
+              <span className="text-base font-semibold">{label}</span>
             </div>
           ))}
         </div>
