@@ -88,7 +88,12 @@ const Home = () => {
                 className: 'h-10 w-10 flex-none',
                 style: { color: brandColor },
               })}
-              <span className="text-base font-semibold">{label}</span>
+              <span
+                className="text-[15px] font-medium tracking-[-0.02em]"
+                style={{ fontFamily: "'JetBrains Mono', monospace" }}
+              >
+                {label}
+              </span>
             </div>
           ))}
         </div>
