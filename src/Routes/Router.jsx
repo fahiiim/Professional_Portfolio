@@ -7,7 +7,7 @@ import Experience from "../Pages/Experience/Experience";
 import Skills from "../Pages/Skills/Skills";
 import Contact from "../Pages/Contact/Contact";
 import Projects from "../Pages/Projects/Projects";
-import NeuroGebra from "../Pages/NeuroGebra/NeuroGebra";
+import OpenSourceSection from "../Pages/NeuroGebra/NeuroGebra";
 import Achievements from "../Pages/Achievements/Achievements";
 import Certificates from "../Pages/Certificates/Certificates";
 
@@ -45,8 +45,12 @@ export const router = createBrowserRouter([
             Component: Projects
          },
          {
+            path: "/open-source",
+            Component: OpenSourceSection
+         },
+         {
             path: "/neurogebra",
-            Component: NeuroGebra
+            element: <Navigate to="/open-source" replace />
          },
          {
             path:"/achievements",
@@ -62,4 +66,8 @@ export const router = createBrowserRouter([
          }
     ]
   },
-]);
+], {
+  basename: import.meta.env.BASE_URL === "/"
+    ? "/"
+    : import.meta.env.BASE_URL.replace(/\/$/, "")
+});
