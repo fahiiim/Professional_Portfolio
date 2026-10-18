@@ -1,11 +1,78 @@
+:root {
+  --matcha-50: #f4f8ec;
+  --matcha-100: #e5efd4;
+  --matcha-200: #c9dba9;
+  --matcha-300: #a7c47d;
+  --matcha-400: #88a95b;
+  --matcha-500: #6c8a45;
+  --matcha-600: #56713a;
+  --matcha-700: #40592f;
+  --matcha-800: #2f4429;
+  --matcha-900: #223621;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background: #ffffff;
-  color: #333333;
+  background: var(--matcha-50);
+  color: #263328;
+}
+
+/* Shared surface for portfolio cards: a matcha-only gradient with no white highlight. */
+.portfolio-card {
+  background: linear-gradient(135deg, var(--matcha-100) 0%, var(--matcha-50) 100%) !important;
+  border-color: var(--matcha-200) !important;
+}
+
+/* Matcha is the visual accent for headings and text selection throughout the site. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1[class*='text-gray'],
+h2[class*='text-gray'],
+h3[class*='text-gray'],
+h4[class*='text-gray'],
+h5[class*='text-gray'],
+h6[class*='text-gray'] {
+  color: var(--matcha-800) !important;
+}
+
+/* Keep body copy and formerly black/ash utility text dark and readable. */
+.text-black,
+.text-gray-900 {
+  color: #1d2a20 !important;
+}
+
+.text-gray-800 {
+  color: #27372a !important;
+}
+
+.text-gray-700 {
+  color: #334435 !important;
+}
+
+.text-gray-600 {
+  color: #3f4d40 !important;
+}
+
+.text-gray-500 {
+  color: #566357 !important;
+}
+
+::selection {
+  background: var(--matcha-300);
+  color: var(--matcha-900);
+}
+
+::-moz-selection {
+  background: var(--matcha-300);
+  color: var(--matcha-900);
 }
 
 /* Smooth scrolling */
@@ -23,18 +90,15 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cccccc;
+  background: var(--matcha-400);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #999999;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #808080;
+  background: var(--matcha-600);
 }
 
 #root {
   min-height: 100vh;
+  background: var(--matcha-50);
 }
