@@ -64,7 +64,7 @@ const badgeStyles = [
 
 export const SkillsSection = ({ id = 'skills' }) => {
   return (
-    <section id={id} className="border-b border-gray-200 bg-white py-16 text-gray-900 sm:py-20">
+    <section id={id} className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-16 text-gray-900 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gray-600">
@@ -78,7 +78,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
           </p>
         </div>
 
-        <div className="overflow-hidden rounded-xl border border-gray-200 bg-gray-200 shadow-sm sm:grid sm:grid-cols-2">
+        <div className="portfolio-card overflow-hidden rounded-xl border shadow-sm sm:grid sm:grid-cols-2">
           {skillGroups.map((group, groupIndex) => (
             <SkillPanel key={group.title} group={group} groupIndex={groupIndex} />
           ))}
@@ -89,7 +89,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
 };
 
 const SkillPanel = ({ group, groupIndex }) => (
-  <article className="border-b border-gray-200 bg-gray-50 p-5 last:border-b-0 sm:min-h-44 sm:border-r sm:[&:nth-child(even)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:p-6">
+  <article className="portfolio-card border-b p-5 last:border-b-0 sm:min-h-44 sm:border-r sm:[&:nth-child(even)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:p-6">
     <div className="mb-5 flex items-center justify-between gap-4">
       <h3 className="rounded bg-gray-200 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wide text-gray-800">
         // {group.title}
