@@ -38,7 +38,7 @@ export const CertificatesSection = ({ id = 'certificates' }) => {
   return (
     <section
       id={id}
-      className="border-b border-gray-200 bg-white py-16 sm:py-20"
+      className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-16 sm:py-20"
     >
 
       <div className="mx-auto max-w-4xl px-4 lg:px-8">
@@ -62,10 +62,10 @@ export const CertificatesSection = ({ id = 'certificates' }) => {
           <div
             className="grid gap-5"
           >
-            {certificatesData.map((cert, index) => (
+            {certificatesData.map((cert) => (
               <div
                 key={cert.title}
-                className="group relative overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-5 transition-all hover:border-gray-300 hover:shadow-md"
+                className="portfolio-card group relative overflow-hidden rounded-lg border p-5 transition-all hover:shadow-md"
               >
                 {/* icon */}
                 <div className="absolute right-5 top-5">
