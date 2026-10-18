@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+const MotionDiv = motion.div;
+
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -35,7 +37,7 @@ const CustomCursor = () => {
   return (
     <>
       {/* Main cursor dot */}
-      <motion.div
+      <MotionDiv
         className="fixed top-0 left-0 w-3 h-3 rounded-full bg-[#C9D98B] pointer-events-none z-[9999] mix-blend-difference"
         animate={{
           x: mousePosition.x - 6,
@@ -51,7 +53,7 @@ const CustomCursor = () => {
       />
       
       {/* Cursor ring */}
-      <motion.div
+      <MotionDiv
         className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-[#C9D98B]/50 pointer-events-none z-[9998] mix-blend-difference"
         animate={{
           x: mousePosition.x - 16,
