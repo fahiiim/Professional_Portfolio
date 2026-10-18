@@ -59,7 +59,7 @@ export const ContactSection = ({ id = 'contact' }) => {
   return (
     <section
       id={id}
-      className="border-b border-gray-200 bg-white py-20"
+      className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-20"
     >
 
       <div className="mx-auto max-w-5xl px-4 lg:px-8">
@@ -79,14 +79,14 @@ export const ContactSection = ({ id = 'contact' }) => {
           </div>
 
           {/* Main Card */}
-          <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 via-white to-gray-100 p-6 shadow-sm sm:p-8">
+          <div className="portfolio-card rounded-2xl border p-6 shadow-sm sm:p-8">
             <div className="mb-8 space-y-3 text-center">
               <p className="text-sm font-medium uppercase tracking-wide text-gray-600">
                 Best way to reach me
               </p>
               <a
                 href="mailto:fahimsarker0805@gmail.com"
-                className="mx-auto inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-base font-semibold text-gray-900 shadow-sm transition hover:border-gray-400 hover:shadow sm:text-lg"
+                className="portfolio-card mx-auto inline-flex items-center gap-2 rounded-full border px-4 py-2 text-base font-semibold text-gray-900 shadow-sm transition hover:shadow sm:text-lg"
               >
                 <Mail className="h-5 w-5 text-gray-700" />
                 fahimsarker0805@gmail.com
@@ -135,10 +135,10 @@ export const ContactSection = ({ id = 'contact' }) => {
   );
 };
 
-const ContactItem = ({ label, value, href, icon: Icon }) => (
-  <div className="flex items-center gap-3 rounded-xl border border-gray-300 bg-white px-4 py-3 shadow-sm transition hover:border-gray-400 hover:shadow">
+const ContactItem = ({ label, value, href, icon }) => (
+  <div className="portfolio-card flex items-center gap-3 rounded-xl border px-4 py-3 shadow-sm transition hover:shadow">
     <div className="rounded-full bg-gray-100 p-2">
-      <Icon className="h-4 w-4 text-gray-700" />
+      {React.createElement(icon, { className: 'h-4 w-4 text-gray-700' })}
     </div>
     <div className="min-w-0">
       <p className="text-xs uppercase tracking-wide text-gray-600">
@@ -155,16 +155,16 @@ const ContactItem = ({ label, value, href, icon: Icon }) => (
   </div>
 );
 
-const SocialLink = ({ name, handle, href, icon: Icon }) => (
+const SocialLink = ({ name, handle, href, icon }) => (
   <a
     href={href}
     target="_blank"
     rel="noreferrer"
-    className="group rounded-xl border border-gray-300 bg-white px-4 py-3 transition hover:border-gray-400 hover:shadow-md"
+    className="portfolio-card group rounded-xl border px-4 py-3 transition hover:shadow-md"
   >
     <div className="mb-1 flex items-center justify-between gap-3">
       <div className="flex min-w-0 items-center gap-2.5">
-        <Icon className="h-5 w-5 flex-shrink-0 text-gray-600 transition-colors group-hover:text-gray-800" />
+        {React.createElement(icon, { className: 'h-5 w-5 flex-shrink-0 text-gray-600 transition-colors group-hover:text-gray-800' })}
         <span className="truncate text-base font-semibold text-gray-900">{name}</span>
       </div>
       <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 text-gray-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
