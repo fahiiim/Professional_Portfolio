@@ -35,7 +35,7 @@ const ScrollToTop = () => {
           exit={{ opacity: 0, scale: 0 }}
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-gray-700 bg-gray-900 shadow-lg shadow-black/20 transition-colors hover:bg-black hover:shadow-xl"
+          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-[var(--matcha-600)] bg-[var(--matcha-700)] shadow-lg shadow-[var(--matcha-700)]/20 transition-colors hover:bg-[var(--matcha-800)] hover:shadow-xl"
           whileHover={{ y: -4 }}
           whileTap={{ scale: 0.9 }}
         >
