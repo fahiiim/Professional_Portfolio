@@ -18,7 +18,7 @@ const liveProjects = [
     action: 'Open Live App',
     actionStyle: 'bg-emerald-600 hover:bg-emerald-700',
     tech: ['AWS', 'FastAPI', 'OpenAI', 'NLP', 'AWS Textract'],
-    image: 'https://private-user-images.githubusercontent.com/84550909/637309758-1af46ae1-1b92-401f-bdab-03ce3e1dc2ba.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODcwMzEzMTQsIm5iZiI6MTc4NzAzMTAxNCwicGF0aCI6Ii84NDU1MDkwOS82MzczMDk3NTgtMWFmNDZhZTEtMWI5Mi00MDFmLWJkYWItMDNjZTNlMWRjMmJhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MTglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODE4VDA1MzAxNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ1YzY0ZjkwNTQwY2NkZDI1ODgyYzkzMmQwZjQ3NWQyYmYzNTkxZWYwMjY2MDAwMjJhZTc0Yzg3NWVmYzg3MzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.vRs4XdTY1XKAqBWsc7Z2nmXPG1qxKxXt_eBABfcHr1k',
+    image: 'https://github.com/user-attachments/assets/1af46ae1-1b92-401f-bdab-03ce3e1dc2ba',
     description: 'AI-powered U.S. route-processing platform that automatically extracts route information from permit documents using AWS Textract, OpenAI, NLP and FastAPI.',
     noteLabel: 'Contribution',
     note: 'System architecture and the end-to-end AI route-processing pipeline.',
@@ -151,7 +151,7 @@ const personalTechIcons = {
 
 export const ProjectsSection = ({ id = 'projects' }) => {
   return (
-    <section id={id} className="border-b border-gray-200 bg-white py-16 sm:py-20">
+    <section id={id} className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="space-y-16">
           <header className="space-y-4">
@@ -213,7 +213,7 @@ const SubsectionHeading = ({ id, icon, eyebrow, title, description }) => (
 );
 
 const LiveProjectCard = ({ project }) => (
-  <article className={`overflow-hidden rounded-lg border border-gray-300 bg-white shadow-sm ${project.featured ? 'lg:col-span-2' : ''}`}>
+  <article className={`portfolio-card overflow-hidden rounded-lg border shadow-sm ${project.featured ? 'lg:col-span-2' : ''}`}>
     <div className="p-5 sm:p-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
@@ -247,7 +247,7 @@ const LiveProjectCard = ({ project }) => (
       </div>
     </div>
 
-    <div className={`flex items-center justify-center border-y border-gray-200 bg-gray-50 p-4 ${project.featured ? 'h-72 sm:h-96' : 'h-56 sm:h-64'}`}>
+    <div className={`flex items-center justify-center border-y border-[var(--matcha-200)] bg-[var(--matcha-100)] p-4 ${project.featured ? 'h-72 sm:h-96' : 'h-56 sm:h-64'}`}>
       <img src={project.image} alt={`${project.title} application preview`} loading="lazy" className="h-full w-full object-contain" />
     </div>
 
@@ -261,7 +261,7 @@ const LiveProjectCard = ({ project }) => (
 );
 
 const PersonalProjectCard = ({ project }) => (
-  <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 transition hover:-translate-y-1 hover:shadow-lg">
+  <article className="portfolio-card group flex h-full flex-col overflow-hidden rounded-2xl border transition hover:-translate-y-1 hover:shadow-lg">
     <div className="relative h-44 overflow-hidden bg-gray-200">
       <img src={project.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
@@ -289,7 +289,7 @@ const PersonalProjectCard = ({ project }) => (
           {project.tech.map((tech) => {
             const icon = personalTechIcons[tech] || SiPython;
             return (
-              <span key={tech} title={tech} aria-label={tech} role="img" className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600">
+              <span key={tech} title={tech} aria-label={tech} role="img" className="portfolio-card flex h-9 w-9 items-center justify-center rounded-lg border text-gray-600">
                 {React.createElement(icon, { 'aria-hidden': true, className: 'h-4.5 w-4.5' })}
               </span>
             );
