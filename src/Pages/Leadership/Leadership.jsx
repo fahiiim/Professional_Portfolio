@@ -44,7 +44,7 @@ export const LeadershipSection = ({ id = 'leadership' }) => {
   return (
     <section
       id={id}
-      className="border-b border-gray-200 bg-white py-16 sm:py-20"
+      className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-16 sm:py-20"
     >
       <div className="mx-auto max-w-5xl px-4 lg:px-8">
         <div className="space-y-12">
@@ -67,10 +67,10 @@ export const LeadershipSection = ({ id = 'leadership' }) => {
           <div
             className="grid gap-5 sm:grid-cols-2"
           >
-            {rolesData.map((item, index) => (
+            {rolesData.map((item) => (
               <div
                 key={`${item.role}-${item.org}`}
-                className="group relative overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-5 transition-all hover:border-gray-300 hover:shadow-md"
+                className="portfolio-card group relative overflow-hidden rounded-lg border p-5 transition-all hover:shadow-md"
               >
                 {/* icon */}
                 <div className="absolute right-4 top-4">
