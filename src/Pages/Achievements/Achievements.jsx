@@ -36,7 +36,7 @@ const recognitionGroups = [
 
 export const AchievementsSection = ({ id = 'achievements' }) => {
   return (
-    <section id={id} className="border-b border-gray-200 bg-white py-16 sm:py-20">
+    <section id={id} className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <div className="space-y-12">
           <div className="space-y-4">
@@ -50,9 +50,9 @@ export const AchievementsSection = ({ id = 'achievements' }) => {
 
           <div className="grid gap-6 lg:grid-cols-3">
             {recognitionGroups.map((group) => (
-              <article key={group.title} className="rounded-xl border border-gray-200 bg-gray-50 p-6">
+              <article key={group.title} className="portfolio-card rounded-xl border p-6">
                 <div className="mb-5 flex items-center gap-3">
-                  <div className="rounded-lg border border-gray-200 bg-white p-2">
+                  <div className="portfolio-card rounded-lg border p-2">
                     <group.icon className="h-5 w-5 text-gray-700" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">{group.title}</h3>
