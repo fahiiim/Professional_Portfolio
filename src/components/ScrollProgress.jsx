@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
+
+const MotionDiv = motion.div;
 
 const ScrollProgress = () => {
   const { scrollYProgress } = useScroll();
@@ -10,7 +12,7 @@ const ScrollProgress = () => {
   });
 
   return (
-    <motion.div
+    <MotionDiv
       className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C9D98B] via-emerald-400 to-cyan-300 origin-left z-50"
       style={{ scaleX }}
     />
