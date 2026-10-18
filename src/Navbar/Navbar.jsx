@@ -9,7 +9,7 @@ const navItems = [
   { label: 'Experience', to: '/experience' },
   { label: 'Skills', to: '/skills' },
   { label: 'Projects', to: '/projects' },
-  { label: 'NeuroGebra', to: '/neurogebra' },
+  { label: 'Open Source Contribution', to: '/open-source' },
   { label: 'Recognition', to: '/achievements' },
   { label: 'Certificates', to: '/certificates' },
   { label: 'Contact', to: '/contact' },
@@ -21,7 +21,7 @@ const Navbar = () => {
   const linkBase = 'relative px-3 py-2 text-sm font-medium transition-all duration-300';
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-[var(--matcha-50)]/95 backdrop-blur border-b border-[var(--matcha-200)] shadow-sm">
       <div className="mx-auto max-w-7xl px-4 py-4">
         
         {/* Desktop Nav - Logo left, Nav centered */}
@@ -35,7 +35,7 @@ const Navbar = () => {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? 'text-gray-900 border-b-2 border-gray-700' : 'text-gray-600 hover:text-gray-900'}`
+                  `${linkBase} ${isActive ? 'text-[var(--matcha-800)] border-b-2 border-[var(--matcha-600)]' : 'text-gray-600 hover:text-[var(--matcha-800)]'}`
                 }
               >
                 {item.label}
@@ -65,7 +65,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-white/95 border-t border-gray-200 px-4 pb-4 pt-3 absolute w-full left-0 top-full z-40 shadow-md">
+        <div className="lg:hidden bg-[var(--matcha-50)]/95 border-t border-[var(--matcha-200)] px-4 pb-4 pt-3 absolute w-full left-0 top-full z-40 shadow-md">
           <ul className="flex flex-col gap-1">
             {navItems.map((item) => (
               <NavLink
@@ -75,8 +75,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `block rounded-md px-4 py-3 text-sm transition-all duration-200 ${
                     isActive
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                      ? 'bg-[var(--matcha-100)] text-[var(--matcha-800)]'
+                      : 'text-gray-600 hover:bg-[var(--matcha-50)] hover:text-[var(--matcha-800)]'
                   }`
                 }
               >
