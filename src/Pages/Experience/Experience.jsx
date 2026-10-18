@@ -6,7 +6,7 @@ const experienceData = [
     org: 'SparkTech Agency',
     period: 'July 2026 - Present',
     bullets: [
-      'Promoted to lead a cross-functional team of 3-4 engineers, owning end-to-end system design, client communication, and delivery of 10+ production AI systems across RAG, OCR, NLP, and computer vision.',
+      'Promoted to lead a cross-functional team of 3-4 engineers, owning end-to-end system design, client communication, and delivery of 15+ production AI systems across RAG, OCR, NLP, and computer vision.',
       'Architected high-performance RAG pipelines with LangChain, FAISS, Pinecone, and FastAPI, optimizing vector retrieval and LLM orchestration to achieve sub-2-second latency.',
       'Built automated MLOps workflows with Weights & Biases and AWS, accelerating experimentation and streamlining CI/CD for production deployments.',
     ],
@@ -34,7 +34,7 @@ const experienceData = [
 
 export const ExperienceSection = ({ id = 'experience' }) => {
   return (
-    <section id={id} className="border-b border-gray-200 bg-white py-16 sm:py-20">
+    <section id={id} className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <div className="space-y-12">
           <div className="space-y-4">
@@ -46,7 +46,7 @@ export const ExperienceSection = ({ id = 'experience' }) => {
             </h2>
           </div>
 
-          <div className="relative rounded-lg border border-gray-200 bg-gray-50 p-6 transition-shadow duration-300 hover:shadow-md sm:p-8">
+          <div className="portfolio-card relative rounded-lg border p-6 transition-shadow duration-300 hover:shadow-md sm:p-8">
             <span className="absolute left-6 top-8 hidden h-[88%] w-px bg-gradient-to-b from-gray-300 to-transparent sm:block" />
             <div className="space-y-10 sm:pl-10">
               {experienceData.map((item) => (
