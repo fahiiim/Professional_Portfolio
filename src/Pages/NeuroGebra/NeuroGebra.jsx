@@ -103,7 +103,7 @@ const OpenSourceSection = ({ id = 'open-source' }) => {
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--matcha-700)]">
                 Open source portfolio
               </p>
-              <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
+              <h2 className="whitespace-nowrap text-[clamp(1.45rem,5vw,2.25rem)] font-bold leading-tight">
                 Open Source Contribution
               </h2>
               <p className="max-w-3xl text-[15px] leading-7 text-gray-600">
