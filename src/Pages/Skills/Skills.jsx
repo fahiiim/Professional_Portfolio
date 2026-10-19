@@ -1,115 +1,250 @@
+
 import React from 'react';
 import {
   Bot,
   BrainCircuit,
-  CloudCog,
+  ChartNoAxesCombined,
+  Cloud,
   Code2,
   Database,
   Eye,
-  MessageSquareText,
   Server,
+  Workflow,
 } from 'lucide-react';
 
 const skillGroups = [
   {
-    title: 'Languages & Core Tools',
+    title: 'Languages & Developer Tools',
     icon: Code2,
-    skills: ['Python', 'Java', 'C', 'SQL', 'Git', 'GitHub', 'Linux', 'Postman'],
+    skills: [
+      'Python', 'C++', 'Java', 'C', 'SQL',
+      'Git', 'GitHub', 'Linux', 'Postman', 'Jupyter Notebook',
+    ],
   },
   {
-    title: 'ML & AI Frameworks',
+    title: 'Machine Learning & Deep Learning',
     icon: BrainCircuit,
-    skills: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'Hugging Face', 'Feature Engineering', 'XAI'],
+    skills: [
+      'PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn',
+      'Pandas', 'NumPy', 'SciPy', 'Feature Engineering',
+    ],
   },
   {
-    title: 'Computer Vision',
+    title: 'Computer Vision & Explainability',
     icon: Eye,
-    skills: ['OpenCV', 'YOLO', 'Vision Transformers', 'CNNs', 'Image Segmentation', 'Object Detection', 'Swin Transformer', 'Grad-CAM'],
+    skills: [
+      'OpenCV', 'YOLO', 'CNNs', 'Vision Transformers',
+      'Swin Transformer', 'Image Segmentation',
+      'Object Detection', 'XAI', 'Grad-CAM',
+    ],
   },
   {
-    title: 'Generative AI & NLP',
-    icon: MessageSquareText,
-    skills: ['LLMs', 'LangChain', 'RAG', 'Transformers', 'PEFT', 'LoRA', 'OpenAI API', 'Sentiment Analysis', 'Text Classification'],
-  },
-  {
-    title: 'Backend & APIs',
+    title: 'Backend & API Engineering',
     icon: Server,
-    skills: ['FastAPI', 'REST APIs', 'PostgreSQL', 'Microservices', 'Event-Driven Systems', 'API Integration', 'AWS SQS'],
+    skills: [
+      'FastAPI', 'REST APIs', 'Pydantic', 'SQLAlchemy',
+      'AsyncIO', 'Async / Concurrent Programming',
+      'Microservices', 'PostgreSQL', 'Redis', 'Event-Driven Systems',
+    ],
   },
   {
-    title: 'Automation & Scraping',
-    icon: Bot,
-    skills: ['Web Scraping', 'Workflow Automation', 'Data Extraction', 'OCR Pipelines', 'AWS Textract', 'Document Processing', 'Speech-to-Text'],
+    title: 'Cloud & MLOps',
+    icon: Cloud,
+    skills: [
+      'AWS EC2', 'AWS S3', 'AWS Lambda', 'AWS Textract',
+      'AWS Bedrock', 'SageMaker', 'Google Cloud',
+      'Docker', 'CI/CD', 'MLflow', 'Weights & Biases',
+    ],
   },
   {
-    title: 'MLOps, Cloud & Deployment',
-    icon: CloudCog,
-    skills: ['Docker', 'CI/CD', 'MLflow', 'Weights & Biases', 'AWS EC2', 'AWS S3', 'AWS ECS', 'AWS Bedrock', 'SageMaker', 'Google Cloud'],
+    title: 'Automation & Data Pipelines',
+    icon: Workflow,
+    skills: [
+      'Workflow Automation', 'Web Scraping', 'Data Extraction',
+      'OCR Pipelines', 'Document Processing', 'Speech-to-Text',
+      'API Integration', 'AWS SQS', 'Logging', 'Observability',
+    ],
   },
   {
-    title: 'Data & Vector Systems',
-    icon: Database,
-    skills: ['Pandas', 'NumPy', 'SciPy', 'Matplotlib', 'Seaborn', 'Statistical Analysis', 'Data Visualization', 'FAISS', 'Pinecone', 'Jupyter', 'Google Colab', 'Kaggle'],
+    title: 'Data, Analytics & Monitoring',
+    icon: ChartNoAxesCombined,
+    skills: [
+      'Matplotlib', 'Seaborn', 'Statistical Analysis',
+      'Data Visualization', 'FAISS', 'Pinecone',
+      'Jupyter', 'Google Colab', 'Kaggle', 'Grafana',
+    ],
   },
 ];
 
-const badgeStyles = [
-  'border-violet-200 bg-violet-50 text-violet-800',
-  'border-cyan-200 bg-cyan-50 text-cyan-800',
-  'border-emerald-200 bg-emerald-50 text-emerald-800',
-  'border-amber-200 bg-amber-50 text-amber-800',
-  'border-blue-200 bg-blue-50 text-blue-800',
-  'border-rose-200 bg-rose-50 text-rose-800',
+const genAiSkills = [
+  'LLMs',
+  'RAG',
+  'Agentic AI',
+  'MCP',
+  'LangChain',
+  'Transformers',
+  'PEFT',
+  'LoRA',
+  'OpenAI API',
+  'Hugging Face',
+  'Langfuse',
+  'Sentiment Analysis',
+  'Text Classification',
 ];
 
 export const SkillsSection = ({ id = 'skills' }) => {
   return (
-    <section id={id} className="border-b border-[var(--matcha-200)] bg-[var(--matcha-50)] py-16 text-gray-900 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="mb-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gray-600">
-            Skills
-          </p>
-          <h2 className="mt-5 max-w-4xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
-            AI, backend, automation & production engineering
+    <section
+      id={id}
+      className="border-b border-emerald-900/10 bg-[#f7f8f2]
+        py-16 text-[#183b32] sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+
+        {/* Section heading */}
+        <div className="mb-10 max-w-3xl sm:mb-12">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="h-px w-8 bg-emerald-700" />
+            <p className="text-xs font-semibold uppercase
+              tracking-[0.24em] text-emerald-800">
+              Skills & Toolkit
+            </p>
+          </div>
+
+          <h2 className="text-3xl font-semibold tracking-tight
+            text-[#183b32] sm:text-4xl lg:text-5xl">
+            Engineering across the AI stack.
           </h2>
-          <p className="mt-4 max-w-3xl text-sm leading-6 text-gray-600 sm:text-[15px]">
-            I build complete AI products across modeling, backend APIs, automation and web scraping, data pipelines, cloud infrastructure, and production deployment.
+
+          <p className="mt-4 max-w-2xl text-sm leading-7
+            text-[#63766c] sm:text-base">
+            From model experimentation to reliable, production-ready
+            systems. My toolkit spans AI engineering, backend
+            development, intelligent automation, and deployment.
           </p>
         </div>
 
-        <div className="portfolio-card overflow-hidden rounded-xl border shadow-sm sm:grid sm:grid-cols-2">
-          {skillGroups.map((group, groupIndex) => (
-            <SkillPanel key={group.title} group={group} groupIndex={groupIndex} />
-          ))}
+        {/* Featured GenAI panel */}
+        <div className="relative mb-5 overflow-hidden rounded-2xl
+          bg-[#183b32] p-6 text-[#f7f8f2] shadow-sm
+          sm:p-8">
+
+          <div className="pointer-events-none absolute -right-12
+            -top-16 h-48 w-48 rounded-full border
+            border-white/10 sm:h-64 sm:w-64" />
+
+          <div className="relative">
+            <div className="mb-5 flex items-center justify-between gap-4">
+              <div>
+                <p className="mb-2 text-[10px] font-semibold
+                  uppercase tracking-[0.2em] text-emerald-200/80">
+                  Core specialization
+                </p>
+
+                <h3
+                  className="!text-[#f7f8f2] text-xl font-semibold sm:text-2xl"
+                  style={{ color: '#f7f8f2' }}
+                >
+                  Generative AI & Intelligent Systems
+                </h3>
+              </div>
+
+              <BrainCircuit
+                aria-hidden="true"
+                className="h-7 w-7 shrink-0 text-emerald-200"
+                strokeWidth={1.5}
+              />
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {genAiSkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-md border border-white/15
+                    bg-white/[0.07] px-3 py-2 text-xs font-medium
+                    text-[#f2f6ed] transition-colors
+                    hover:border-emerald-200/50
+                    hover:bg-white/[0.13]"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
+
+        {/* Supporting skill groups */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {skillGroups.map((group) => {
+            const Icon = group.icon;
+
+            return (
+              <article
+                key={group.title}
+                className="group rounded-2xl border
+                  border-[#dce5d9] bg-white/70 p-5
+                  transition-all duration-200
+                  hover:border-[#a8c4ae]
+                  hover:bg-white hover:shadow-md
+                  sm:p-6"
+              >
+                <div className="mb-5 flex items-start
+                  justify-between gap-4">
+                  <h3 className="text-base font-semibold
+                    tracking-tight text-[#244b3d] sm:text-lg">
+                    {group.title}
+                  </h3>
+
+                  <div className="flex h-9 w-9 shrink-0
+                    items-center justify-center rounded-lg
+                    bg-[#eaf1e7] text-[#315c49]
+                    transition-colors group-hover:bg-[#dcebd9]">
+                    <Icon
+                      aria-hidden="true"
+                      className="h-[18px] w-[18px]"
+                      strokeWidth={1.7}
+                    />
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="inline-flex items-center
+                        rounded-md border border-[#e0e8dd]
+                        bg-[#edf2e9] px-2.5 py-1.5
+                        text-xs font-medium text-[#365447]
+                        transition-colors
+                        hover:border-[#b6cfb8]
+                        hover:bg-[#e1ecdc]"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Closing note */}
+        <div className="mt-8 flex items-center gap-3
+          border-t border-[#dce5d9] pt-5">
+          <Bot
+            aria-hidden="true"
+            className="h-5 w-5 shrink-0 text-emerald-800"
+            strokeWidth={1.6}
+          />
+          <p className="text-xs leading-6 text-[#63766c] sm:text-sm">
+            Focused on building practical AI products, robust APIs,
+            and maintainable production systems.
+          </p>
+        </div>
+
       </div>
     </section>
   );
 };
-
-const SkillPanel = ({ group, groupIndex }) => (
-  <article className="portfolio-card border-b p-5 last:border-b-0 sm:min-h-44 sm:border-r sm:[&:nth-child(even)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:p-6">
-    <div className="mb-5 flex items-center justify-between gap-4">
-      <h3 className="rounded bg-gray-200 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wide text-gray-800">
-        // {group.title}
-      </h3>
-      {React.createElement(group.icon, {
-        'aria-hidden': true,
-        className: 'h-5 w-5 flex-none text-gray-500',
-      })}
-    </div>
-    <div className="flex flex-wrap gap-2">
-      {group.skills.map((skill, skillIndex) => (
-        <span
-          key={skill}
-          className={`border px-2.5 py-1 font-mono text-xs font-semibold transition-transform hover:-translate-y-0.5 ${badgeStyles[(groupIndex + skillIndex) % badgeStyles.length]}`}
-        >
-          {skill}
-        </span>
-      ))}
-    </div>
-  </article>
-);
 
 export default SkillsSection;
