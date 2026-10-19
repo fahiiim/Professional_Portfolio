@@ -18,7 +18,7 @@ const navItems = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const linkBase = 'relative px-3 py-2 text-sm font-medium transition-all duration-300';
+  const linkBase = 'relative cursor-pointer whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-all duration-300';
 
   return (
     <nav className="sticky top-0 z-50 bg-[var(--matcha-50)]/95 backdrop-blur border-b border-[var(--matcha-200)] shadow-sm">
@@ -35,7 +35,7 @@ const Navbar = () => {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? 'text-[var(--matcha-800)] border-b-2 border-[var(--matcha-600)]' : 'text-gray-600 hover:text-[var(--matcha-800)]'}`
+                  `${linkBase} ${isActive ? 'bg-[var(--matcha-100)] text-[var(--matcha-800)] shadow-sm' : 'text-gray-600 hover:bg-[var(--matcha-100)] hover:text-[var(--matcha-800)] hover:shadow-sm'}`
                 }
               >
                 {item.label}
