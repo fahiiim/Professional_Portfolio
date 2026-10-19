@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, BriefcaseBusiness, CheckCircle2, ExternalLink, FlaskConical } from 'lucide-react';
+import llmFineTuningArchitecture from '../../assets/llm-fine-tuning-architecture.svg';
 import {
   SiDvc,
   SiKeras,
@@ -111,7 +112,7 @@ const personalProjects = [
     description: 'Parameter-efficient LLM fine-tuning using LoRA and PEFT with a T5 model on the IMDB dataset.',
     results: ['90%+ evaluation accuracy', 'LoRA parameter-efficient tuning', 'Reproducible training workflow'],
     tech: ['Keras', 'OpenAI API', 'PyTorch'],
-    image: 'https://media.istockphoto.com/id/2213677534/photo/large-language-model-with-ai-technology-user-working-on-laptop-in-llm-data-performrange.webp?a=1&b=1&s=612x612&w=0',
+    image: llmFineTuningArchitecture,
     link: 'https://github.com/fahiiim/Large-Language-Model-Fine-Tuning',
     linkLabel: 'View Source',
   },
