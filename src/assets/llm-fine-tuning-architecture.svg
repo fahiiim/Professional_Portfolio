@@ -1,0 +1,64 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDF5DF"/>
+      <stop offset="1" stop-color="#DCEAC3"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="88" y1="85" x2="1110" y2="713" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBF2"/>
+      <stop offset="1" stop-color="#E5EFD4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#40592F" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1L10 6L1 11" stroke="#56713A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#background)"/>
+  <rect x="58" y="52" width="1084" height="696" rx="34" fill="url(#panel)" stroke="#C9DBA9" stroke-width="3" filter="url(#shadow)"/>
+
+  <text x="104" y="128" fill="#223621" font-family="Arial, sans-serif" font-size="34" font-weight="700">Fine-tuning pipeline</text>
+  <text x="104" y="166" fill="#56713A" font-family="Arial, sans-serif" font-size="20">Parameter-efficient adaptation with LoRA + PEFT</text>
+
+  <rect x="104" y="224" width="218" height="180" rx="22" fill="#F4F8EC" stroke="#88A95B" stroke-width="3"/>
+  <circle cx="160" cy="282" r="26" fill="#6C8A45"/>
+  <path d="M148 282H172M160 270V294" stroke="#F4F8EC" stroke-width="5" stroke-linecap="round"/>
+  <text x="140" y="342" fill="#223621" font-family="Arial, sans-serif" font-size="22" font-weight="700">Base LLM</text>
+  <text x="140" y="373" fill="#56713A" font-family="Arial, sans-serif" font-size="17">Pre-trained model</text>
+
+  <rect x="392" y="224" width="218" height="180" rx="22" fill="#F4F8EC" stroke="#88A95B" stroke-width="3"/>
+  <circle cx="448" cy="282" r="26" fill="#6C8A45"/>
+  <path d="M436 282H460M448 270V294" stroke="#F4F8EC" stroke-width="5" stroke-linecap="round"/>
+  <text x="430" y="342" fill="#223621" font-family="Arial, sans-serif" font-size="22" font-weight="700">LoRA adapters</text>
+  <text x="430" y="373" fill="#56713A" font-family="Arial, sans-serif" font-size="17">Train fewer weights</text>
+
+  <rect x="680" y="224" width="218" height="180" rx="22" fill="#F4F8EC" stroke="#88A95B" stroke-width="3"/>
+  <circle cx="736" cy="282" r="26" fill="#6C8A45"/>
+  <path d="M724 282H748M736 270V294" stroke="#F4F8EC" stroke-width="5" stroke-linecap="round"/>
+  <text x="716" y="342" fill="#223621" font-family="Arial, sans-serif" font-size="22" font-weight="700">Task data</text>
+  <text x="716" y="373" fill="#56713A" font-family="Arial, sans-serif" font-size="17">IMDB + prompts</text>
+
+  <rect x="968" y="224" width="126" height="180" rx="22" fill="#40592F"/>
+  <circle cx="1031" cy="282" r="26" fill="#C9DBA9"/>
+  <path d="M1018 282L1027 291L1045 272" stroke="#40592F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="994" y="342" fill="#F4F8EC" font-family="Arial, sans-serif" font-size="22" font-weight="700">Eval</text>
+  <text x="990" y="373" fill="#C9DBA9" font-family="Arial, sans-serif" font-size="17">Quality</text>
+
+  <path d="M322 314H382" stroke="#56713A" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M610 314H670" stroke="#56713A" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M898 314H958" stroke="#56713A" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="104" y="492" width="990" height="1" fill="#C9DBA9"/>
+  <text x="104" y="556" fill="#40592F" font-family="Arial, sans-serif" font-size="18" font-weight="700">Why this approach?</text>
+  <text x="104" y="596" fill="#56713A" font-family="Arial, sans-serif" font-size="19">Adapt a capable model with a small trainable footprint.</text>
+  <text x="104" y="630" fill="#56713A" font-family="Arial, sans-serif" font-size="19">LoRA keeps experiments reproducible, efficient and easy to deploy.</text>
+
+  <rect x="104" y="674" width="164" height="34" rx="17" fill="#A7C47D"/>
+  <text x="137" y="697" fill="#223621" font-family="Arial, sans-serif" font-size="15" font-weight="700">PEFT</text>
+  <rect x="284" y="674" width="164" height="34" rx="17" fill="#A7C47D"/>
+  <text x="314" y="697" fill="#223621" font-family="Arial, sans-serif" font-size="15" font-weight="700">LoRA</text>
+  <rect x="464" y="674" width="164" height="34" rx="17" fill="#A7C47D"/>
+  <text x="494" y="697" fill="#223621" font-family="Arial, sans-serif" font-size="15" font-weight="700">T5</text>
+</svg>
