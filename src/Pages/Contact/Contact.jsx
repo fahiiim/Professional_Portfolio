@@ -50,8 +50,8 @@ export const ContactSection = ({ id = 'contact' }) => {
     },
     {
       name: 'Instagram',
-      handle: '@f_a_h_iii_m',
-      href: 'https://www.instagram.com/f_a_h_iii_m',
+      handle: '@fahimerican',
+      href: 'https://www.instagram.com/fahimerican',
       icon: Instagram,
     },
   ];
