@@ -211,7 +211,7 @@ const OpenSourceSection = ({ id = 'open-source' }) => {
             if (event.target === event.currentTarget) setIsArchOpen(false);
           }}
         >
-          <div className="flex h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-[var(--matcha-200)] bg-white shadow-2xl">
+          <div className="flex h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-none border border-[var(--matcha-200)] bg-white shadow-2xl">
             <div className="flex items-center justify-between gap-4 border-b border-[var(--matcha-100)] bg-[var(--matcha-50)] px-4 py-3 sm:px-6">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--matcha-700)]">
@@ -245,7 +245,7 @@ const OpenSourceSection = ({ id = 'open-source' }) => {
               <img
                 src={publicAsset('typoformer-architecture.png')}
                 alt="TypoFormer Neural Architecture Diagram"
-                className="mx-auto block h-auto max-w-full rounded-xl border border-gray-200 bg-white p-4 shadow-sm"
+                className="mx-auto block h-auto max-w-full rounded-none border border-gray-200 bg-white p-4 shadow-sm"
               />
             </div>
           </div>
@@ -263,7 +263,7 @@ const OpenSourceSection = ({ id = 'open-source' }) => {
             if (event.target === event.currentTarget) setIsPdfOpen(false);
           }}
         >
-          <div className="flex h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-[var(--matcha-200)] bg-white shadow-2xl">
+          <div className="flex h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-none border border-[var(--matcha-200)] bg-white shadow-2xl">
             <div className="flex items-center justify-between gap-4 border-b border-[var(--matcha-100)] bg-[var(--matcha-50)] px-4 py-3 sm:px-6">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--matcha-700)]">Open source contribution</p>
@@ -291,7 +291,7 @@ const OpenSourceSection = ({ id = 'open-source' }) => {
 };
 
 const NeuroGebraCard = () => (
-  <article className="portfolio-card overflow-hidden rounded-2xl border shadow-sm lg:col-span-2">
+  <article className="portfolio-card overflow-hidden rounded-none border shadow-sm lg:col-span-2">
     <div className="grid items-center gap-8 bg-[var(--matcha-50)]/70 p-6 sm:p-8 lg:grid-cols-[0.95fr_1.05fr]">
       <div>
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--matcha-700)]">
@@ -309,14 +309,14 @@ const NeuroGebraCard = () => (
             ['100+', 'Datasets'],
             ['10', 'Domains'],
           ].map(([value, label]) => (
-            <div key={label} className="portfolio-card rounded-xl border px-3 py-3 text-center">
+            <div key={label} className="portfolio-card rounded-none border px-3 py-3 text-center">
               <p className="text-lg font-bold text-[var(--matcha-800)]">{value}</p>
               <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[var(--matcha-700)]">{label}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="overflow-hidden rounded-xl border border-[var(--matcha-100)] bg-gradient-to-br from-[var(--matcha-100)] to-[var(--matcha-50)] p-5">
+      <div className="overflow-hidden rounded-none border border-[var(--matcha-100)] bg-gradient-to-br from-[var(--matcha-100)] to-[var(--matcha-50)] p-5">
         <img src={publicAsset('neurogebra-logo.png')} alt="NeuroGebra logo" className="mx-auto block h-auto w-full max-w-xl" />
       </div>
     </div>
@@ -330,9 +330,9 @@ const NeuroGebraCard = () => (
         {capabilityGroups.map((group) => {
           const Icon = group.icon;
           return (
-            <div key={group.title} className="portfolio-card rounded-xl border p-5">
+            <div key={group.title} className="portfolio-card rounded-none border p-5">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--matcha-200)] bg-[var(--matcha-50)] text-[var(--matcha-700)]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-none border border-[var(--matcha-200)] bg-[var(--matcha-50)] text-[var(--matcha-700)]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <h4 className="text-base font-semibold">{group.title}</h4>
@@ -360,7 +360,7 @@ const NeuroGebraCard = () => (
 );
 
 const TypoFormerCard = ({ onOpenArch }) => (
-  <article className="portfolio-card overflow-hidden rounded-2xl border shadow-sm lg:col-span-2">
+  <article className="portfolio-card overflow-hidden rounded-none border shadow-sm lg:col-span-2">
     {/* Top Accent Gradient Bar */}
     <div className="h-1.5 w-full bg-gradient-to-r from-[var(--matcha-600)] via-[var(--matcha-400)] to-[var(--matcha-200)]" />
 
@@ -389,7 +389,7 @@ const TypoFormerCard = ({ onOpenArch }) => (
             ['100%', 'Air-Gapped Offline'],
             ['99.2%', 'Clean Retention'],
           ].map(([value, label]) => (
-            <div key={label} className="portfolio-card rounded-xl border px-3 py-3 text-center">
+            <div key={label} className="portfolio-card rounded-none border px-3 py-3 text-center">
               <p className="text-lg font-bold text-[var(--matcha-800)]">{value}</p>
               <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[var(--matcha-700)]">{label}</p>
             </div>
@@ -400,7 +400,7 @@ const TypoFormerCard = ({ onOpenArch }) => (
       {/* Brand Logo & Architecture Diagram Preview Showcase */}
       <div className="space-y-4">
         {/* TypoFormer Logo Container */}
-        <div className="overflow-hidden rounded-2xl border border-[var(--matcha-200)] bg-white p-6 shadow-xs transition-transform duration-300 hover:shadow-md">
+        <div className="overflow-hidden rounded-none border border-[var(--matcha-200)] bg-white p-6 shadow-xs transition-transform duration-300 hover:shadow-md">
           <img
             src={publicAsset('typoformer-logo.png')}
             alt="TypoFormer logo"
@@ -412,11 +412,11 @@ const TypoFormerCard = ({ onOpenArch }) => (
         <button
           type="button"
           onClick={onOpenArch}
-          className="group relative flex w-full items-center justify-between rounded-xl border border-[var(--matcha-300)] bg-gradient-to-r from-[var(--matcha-100)] to-[var(--matcha-50)] px-4 py-3 text-left transition hover:border-[var(--matcha-500)] hover:shadow-sm"
+          className="group relative flex w-full items-center justify-between rounded-none border border-[var(--matcha-300)] bg-gradient-to-r from-[var(--matcha-100)] to-[var(--matcha-50)] px-4 py-3 text-left transition hover:border-[var(--matcha-500)] hover:shadow-sm"
           aria-label="Inspect TypoFormer Neural Architecture Diagram"
         >
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--matcha-800)] text-white shadow-xs">
+            <div className="flex h-9 w-9 items-center justify-center rounded-none bg-[var(--matcha-800)] text-white shadow-xs">
               <Cpu className="h-4 w-4" />
             </div>
             <div>
@@ -447,9 +447,9 @@ const TypoFormerCard = ({ onOpenArch }) => (
         {typoFormerCapabilities.map((group) => {
           const Icon = group.icon;
           return (
-            <div key={group.title} className="portfolio-card rounded-xl border p-5">
+            <div key={group.title} className="portfolio-card rounded-none border p-5">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--matcha-200)] bg-[var(--matcha-50)] text-[var(--matcha-700)]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-none border border-[var(--matcha-200)] bg-[var(--matcha-50)] text-[var(--matcha-700)]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <h4 className="text-base font-semibold text-gray-900">{group.title}</h4>
@@ -494,9 +494,9 @@ const TypoFormerCard = ({ onOpenArch }) => (
 );
 
 const FastApiHandbookCard = () => (
-  <article className="portfolio-card flex h-full flex-col rounded-2xl border p-6 shadow-sm sm:p-8">
+  <article className="portfolio-card flex h-full flex-col rounded-none border p-6 shadow-sm sm:p-8">
     <div className="flex items-start justify-between gap-4">
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--matcha-800)] text-[var(--matcha-100)]">
+      <div className="flex h-12 w-12 items-center justify-center rounded-none bg-[var(--matcha-800)] text-[var(--matcha-100)]">
         <Code2 className="h-6 w-6" aria-hidden="true" />
       </div>
       <span className="rounded-full bg-[var(--matcha-50)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--matcha-700)]">Backend handbook</span>
@@ -517,7 +517,7 @@ const FastApiHandbookCard = () => (
       href="https://github.com/fahiiim/FastAPI-is-All-You-Need-for-Backend-Development"
       target="_blank"
       rel="noreferrer"
-      className="mt-auto inline-flex items-center justify-between gap-3 rounded-xl border border-[var(--matcha-300)] bg-[var(--matcha-50)] px-4 py-3 text-sm font-semibold text-[var(--matcha-800)] transition hover:border-[var(--matcha-600)] hover:bg-[var(--matcha-100)]"
+      className="mt-auto inline-flex items-center justify-between gap-3 rounded-none border border-[var(--matcha-300)] bg-[var(--matcha-50)] px-4 py-3 text-sm font-semibold text-[var(--matcha-800)] transition hover:border-[var(--matcha-600)] hover:bg-[var(--matcha-100)]"
     >
       <span>Explore the repository</span>
       <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -526,11 +526,11 @@ const FastApiHandbookCard = () => (
 );
 
 const KubernetesHandbookCard = ({ onOpen }) => (
-  <article className="portfolio-card grid gap-6 rounded-2xl border p-6 shadow-sm sm:p-8 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start">
+  <article className="portfolio-card grid gap-6 rounded-none border p-6 shadow-sm sm:p-8 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start">
     <button
       type="button"
       onClick={onOpen}
-      className="group relative mx-auto block aspect-[3/4] w-full max-w-[18rem] min-w-0 overflow-hidden rounded-xl border border-[var(--matcha-200)] bg-[var(--matcha-50)] p-3 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--matcha-500)] focus:ring-offset-2"
+      className="group relative mx-auto block aspect-[3/4] w-full max-w-[18rem] min-w-0 overflow-hidden rounded-none border border-[var(--matcha-200)] bg-[var(--matcha-50)] p-3 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--matcha-500)] focus:ring-offset-2"
       aria-label="Open The Kubernetes Handbook PDF"
     >
       <img src={publicAsset('kubernetes-handbook-cover.png')} alt="The Kubernetes Handbook cover" className="mx-auto block h-full w-full min-w-0 object-contain object-top transition duration-300 group-hover:scale-[1.02]" />
@@ -584,7 +584,7 @@ const ExternalResourceLink = ({ label, href }) => (
     href={href}
     target="_blank"
     rel="noreferrer"
-    className="portfolio-card group inline-flex items-center justify-between rounded-lg border px-4 py-3 text-sm font-medium text-[var(--matcha-800)] transition hover:bg-[var(--matcha-50)]"
+    className="portfolio-card group inline-flex items-center justify-between rounded-none border px-4 py-3 text-sm font-medium text-[var(--matcha-800)] transition hover:bg-[var(--matcha-50)]"
   >
     <span>{label}</span>
     <ExternalLink className="h-4 w-4 text-[var(--matcha-600)] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
