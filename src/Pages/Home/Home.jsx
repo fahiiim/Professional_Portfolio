@@ -107,7 +107,7 @@ const Home = () => {
           <p id="impact-heading" className="mb-6 text-center text-sm font-semibold uppercase tracking-[0.3em] text-gray-600">
             Selected Impact
           </p>
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-gray-200 bg-gray-200 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-none border border-gray-200 bg-gray-200 sm:grid-cols-3 lg:grid-cols-5">
             {[
               ['15+', 'Production AI Systems Shipped'],
               ['9,000+', 'NeuroGebra Users'],
