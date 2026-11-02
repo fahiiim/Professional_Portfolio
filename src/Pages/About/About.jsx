@@ -14,7 +14,7 @@ export const AboutSection = ({ id = 'about' }) => {
               Engineering production AI from architecture to delivery.
             </h2>
 
-            <div className="portfolio-card mt-10 rounded-xl border p-5 shadow-sm sm:p-6">
+            <div className="portfolio-card mt-10 rounded-none border p-5 shadow-sm sm:p-6">
               <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gray-700">
                 Professional Snapshot
               </h3>
@@ -65,7 +65,7 @@ export const AboutSection = ({ id = 'about' }) => {
 
 const SnapshotItem = ({ icon, label, value }) => (
   <div className="flex gap-3 py-4 first:pt-0 last:pb-0">
-    <div className="portfolio-card mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-lg border text-gray-600">
+    <div className="portfolio-card mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-none border text-gray-600">
       {React.createElement(icon, { 'aria-hidden': true, className: 'h-4 w-4' })}
     </div>
     <div>
