@@ -20,7 +20,7 @@ export const EducationSection = ({ id = 'education' }) => {
 
           {/* Card */}
           <div
-            className="portfolio-card relative overflow-hidden rounded-lg border p-6 transition-shadow duration-300 hover:shadow-md"
+            className="portfolio-card relative overflow-hidden rounded-none border p-6 transition-shadow duration-300 hover:shadow-md"
           >
             {/* left accent bar */}
             <span className="absolute left-0 top-0 h-full w-1 bg-gray-400" />
