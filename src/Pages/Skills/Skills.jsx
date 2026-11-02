@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Bot,
@@ -124,8 +123,8 @@ export const SkillsSection = ({ id = 'skills' }) => {
           </p>
         </div>
 
-        {/* Featured GenAI panel */}
-        <div className="relative mb-5 overflow-hidden rounded-2xl
+        {/* Featured GenAI panel (Roundness 0) */}
+        <div className="relative mb-5 overflow-hidden rounded-none
           bg-[#183b32] p-6 text-[#f7f8f2] shadow-sm
           sm:p-8">
 
@@ -173,7 +172,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
           </div>
         </div>
 
-        {/* Supporting skill groups */}
+        {/* Supporting skill groups (Roundness 0) */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {skillGroups.map((group) => {
             const Icon = group.icon;
@@ -181,7 +180,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
             return (
               <article
                 key={group.title}
-                className="group rounded-2xl border
+                className="group rounded-none border
                   border-[#dce5d9] bg-white/70 p-5
                   transition-all duration-200
                   hover:border-[#a8c4ae]
@@ -196,7 +195,7 @@ export const SkillsSection = ({ id = 'skills' }) => {
                   </h3>
 
                   <div className="flex h-9 w-9 shrink-0
-                    items-center justify-center rounded-lg
+                    items-center justify-center rounded-none
                     bg-[#eaf1e7] text-[#315c49]
                     transition-colors group-hover:bg-[#dcebd9]">
                     <Icon
