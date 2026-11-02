@@ -50,9 +50,9 @@ export const AchievementsSection = ({ id = 'achievements' }) => {
 
           <div className="grid gap-6 lg:grid-cols-3">
             {recognitionGroups.map((group) => (
-              <article key={group.title} className="portfolio-card rounded-xl border p-6">
+              <article key={group.title} className="portfolio-card rounded-none border p-6">
                 <div className="mb-5 flex items-center gap-3">
-                  <div className="portfolio-card rounded-lg border p-2">
+                  <div className="portfolio-card rounded-none border p-2">
                     <group.icon className="h-5 w-5 text-gray-700" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">{group.title}</h3>
