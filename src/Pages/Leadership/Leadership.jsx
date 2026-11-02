@@ -70,7 +70,7 @@ export const LeadershipSection = ({ id = 'leadership' }) => {
             {rolesData.map((item) => (
               <div
                 key={`${item.role}-${item.org}`}
-                className="portfolio-card group relative overflow-hidden rounded-lg border p-5 transition-all hover:shadow-md"
+                className="portfolio-card group relative overflow-hidden rounded-none border p-5 transition-all hover:shadow-md"
               >
                 {/* icon */}
                 <div className="absolute right-4 top-4">
