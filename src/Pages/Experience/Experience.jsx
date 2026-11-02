@@ -167,7 +167,7 @@ export const ExperienceSection = ({ id = 'experience' }) => {
           {/* Cards Container */}
           <div className="space-y-10">
             {/* CARD 1: Sparktech Agency */}
-            <div className="portfolio-card relative overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:shadow-lg sm:p-8">
+            <div className="portfolio-card relative overflow-hidden rounded-none border p-6 transition-all duration-300 hover:shadow-lg sm:p-8">
               {/* Top Accent Gradient Bar */}
               <div className="absolute left-0 top-0 h-1.5 w-full bg-gradient-to-r from-[var(--matcha-500)] via-[var(--matcha-400)] to-[var(--matcha-200)]" />
 
@@ -175,11 +175,11 @@ export const ExperienceSection = ({ id = 'experience' }) => {
               <div className="flex flex-col gap-4 border-b border-[var(--matcha-200)] pb-6 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-start gap-4">
                   {/* Brand Logo */}
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[var(--matcha-300)] bg-white p-1.5 shadow-sm transition-transform duration-200 hover:scale-105">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-none border border-[var(--matcha-300)] bg-white p-1.5 shadow-sm transition-transform duration-200 hover:scale-105">
                     <img
                       src={sparktechLogo}
                       alt="Sparktech Agency Logo"
-                      className="h-full w-full object-contain rounded-lg"
+                      className="h-full w-full object-contain rounded-none"
                     />
                   </div>
                   <div>
@@ -295,7 +295,7 @@ export const ExperienceSection = ({ id = 'experience' }) => {
             </div>
 
             {/* CARD 2: GUB Mars Rover Team */}
-            <div className="portfolio-card relative overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:shadow-lg sm:p-8">
+            <div className="portfolio-card relative overflow-hidden rounded-none border p-6 transition-all duration-300 hover:shadow-lg sm:p-8">
               {/* Top Accent Gradient Bar */}
               <div className="absolute left-0 top-0 h-1.5 w-full bg-gradient-to-r from-amber-600 via-[var(--matcha-500)] to-[var(--matcha-300)]" />
 
@@ -303,7 +303,7 @@ export const ExperienceSection = ({ id = 'experience' }) => {
               <div className="flex flex-col gap-4 border-b border-[var(--matcha-200)] pb-6 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-start gap-4">
                   {/* Rover / Robotics Badge */}
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[var(--matcha-300)] bg-[var(--matcha-100)] text-[var(--matcha-700)] shadow-sm">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-none border border-[var(--matcha-300)] bg-[var(--matcha-100)] text-[var(--matcha-700)] shadow-sm">
                     <Cpu className="h-7 w-7 text-[var(--matcha-700)]" />
                   </div>
                   <div>
@@ -327,7 +327,7 @@ export const ExperienceSection = ({ id = 'experience' }) => {
                 </div>
 
                 {/* Competition Award Ribbon */}
-                <div className="inline-flex items-center gap-2 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 px-3.5 py-2 text-xs font-semibold text-amber-900 shadow-xs">
+                <div className="inline-flex items-center gap-2 rounded-none border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 px-3.5 py-2 text-xs font-semibold text-amber-900 shadow-xs">
                   <Award className="h-4 w-4 text-amber-600 shrink-0" />
                   <span>ARC 2026 Finalist</span>
                 </div>
@@ -336,7 +336,7 @@ export const ExperienceSection = ({ id = 'experience' }) => {
               {/* Rover Content */}
               <div className="mt-6 space-y-5">
                 {/* Highlight Banner */}
-                <div className="flex items-center gap-3 rounded-xl border border-amber-200/80 bg-amber-50/60 p-4 text-sm text-amber-950">
+                <div className="flex items-center gap-3 rounded-none border border-amber-200/80 bg-amber-50/60 p-4 text-sm text-amber-950">
                   <Award className="h-5 w-5 text-amber-600 shrink-0" />
                   <p className="font-medium">
                     <strong className="font-bold text-amber-900">International Distinction: </strong>
