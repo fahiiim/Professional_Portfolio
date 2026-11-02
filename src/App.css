@@ -25,6 +25,7 @@ body {
 .portfolio-card {
   background: linear-gradient(135deg, var(--matcha-100) 0%, var(--matcha-50) 100%) !important;
   border-color: var(--matcha-200) !important;
+  border-radius: 0 !important;
 }
 
 /* Matcha is the visual accent for headings and text selection throughout the site. */
