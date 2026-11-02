@@ -214,7 +214,7 @@ const SubsectionHeading = ({ id, icon, eyebrow, title, description }) => (
 );
 
 const LiveProjectCard = ({ project }) => (
-  <article className={`portfolio-card overflow-hidden rounded-lg border shadow-sm ${project.featured ? 'lg:col-span-2' : ''}`}>
+  <article className={`portfolio-card overflow-hidden rounded-none border shadow-sm ${project.featured ? 'lg:col-span-2' : ''}`}>
     <div className="p-5 sm:p-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
@@ -262,7 +262,7 @@ const LiveProjectCard = ({ project }) => (
 );
 
 const PersonalProjectCard = ({ project }) => (
-  <article className="portfolio-card group flex h-full flex-col overflow-hidden rounded-2xl border transition hover:-translate-y-1 hover:shadow-lg">
+  <article className="portfolio-card group flex h-full flex-col overflow-hidden rounded-none border transition hover:-translate-y-1 hover:shadow-lg">
     <div className="relative h-44 overflow-hidden bg-gray-200">
       <img src={project.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
@@ -290,7 +290,7 @@ const PersonalProjectCard = ({ project }) => (
           {project.tech.map((tech) => {
             const icon = personalTechIcons[tech] || SiPython;
             return (
-              <span key={tech} title={tech} aria-label={tech} role="img" className="portfolio-card flex h-9 w-9 items-center justify-center rounded-lg border text-gray-600">
+              <span key={tech} title={tech} aria-label={tech} role="img" className="portfolio-card flex h-9 w-9 items-center justify-center rounded-none border text-gray-600">
                 {React.createElement(icon, { 'aria-hidden': true, className: 'h-4.5 w-4.5' })}
               </span>
             );
