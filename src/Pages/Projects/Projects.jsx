@@ -1,6 +1,10 @@
 import React from 'react';
 import { ArrowUpRight, BriefcaseBusiness, CheckCircle2, ExternalLink, FlaskConical } from 'lucide-react';
 import llmFineTuningArchitecture from '../../assets/llm-fine-tuning-architecture.svg';
+import ratedDocsLogo from '../../assets/rateddocs-icon.svg';
+import ratedDocsPreview from '../../assets/rateddocs-preview.png';
+import gocustifyLogo from '../../assets/gocustify-icon.svg';
+import gocustifyPreview from '../../assets/gocustify-preview.png';
 import {
   SiDvc,
   SiKeras,
@@ -34,6 +38,30 @@ const liveProjects = [
     description: 'Production-grade legal assistant for U.S. Federal and Michigan State law, powered by semantic retrieval, article-level indexing and LLM-based reasoning.',
     noteLabel: 'Performance',
     note: 'Optimized retrieval and orchestration for sub-2-second responses.',
+  },
+  {
+    title: 'RatedDocs: AI Dental Tourism SaaS',
+    href: 'https://rateddocs.com/',
+    action: 'Open Live App',
+    actionStyle: 'bg-[#0E3A5F] hover:bg-[#134e7f]',
+    logo: ratedDocsLogo,
+    image: ratedDocsPreview,
+    tech: ['Python', 'FastAPI', 'Computer Vision', 'NLP', 'Recommendation Systems', 'Supabase', 'PostgreSQL', 'Stripe Escrow'],
+    description: 'Global SaaS marketplace connecting international patients with vetted overseas dental clinics. Powered by AI-guided dental procedure matching, smile analysis simulations, and automated treatment dossier generation.',
+    noteLabel: 'AI & Systems Architecture',
+    note: 'Architected automated clinical record intake, intelligent doctor-patient recommendation engine, and treatment feasibility scoring pipelines.',
+  },
+  {
+    title: 'GoCustify: AI CRM Platform',
+    href: 'https://gocustify.com/',
+    action: 'Open Live App',
+    actionStyle: 'bg-purple-600 hover:bg-purple-700',
+    logo: gocustifyLogo,
+    image: gocustifyPreview,
+    tech: ['FastAPI', 'Voice AI', 'WebSockets', 'Telnyx', 'OpenAI', 'Speech-to-Text', 'Redis', 'PostgreSQL', 'Stripe Connect'],
+    description: 'Enterprise AI-native CRM and communication platform engineered as a next-generation competitor to GoHighLevel. Features autonomous AI phone agents, voice form fill, multi-channel messaging (Voice, WhatsApp, SMS, Email), automated invoice dispatching, and dynamic sales pipeline management.',
+    noteLabel: 'Core Architecture',
+    note: 'Engineered real-time Voice AI calling workflows, AI receptionist call transfers, automated invoice reminders, and WebSocket live transcripts.',
   },
   {
     title: 'Quranity',
@@ -217,23 +245,30 @@ const LiveProjectCard = ({ project }) => (
   <article className={`portfolio-card overflow-hidden rounded-none border shadow-sm ${project.featured ? 'lg:col-span-2' : ''}`}>
     <div className="p-5 sm:p-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          {project.status && <p className="mb-1 text-xs italic text-gray-500">{project.status}</p>}
-          <h4 className="text-xl font-bold leading-tight text-gray-900">
-            {project.href ? (
-              <a href={project.href} target="_blank" rel="noreferrer" className="underline decoration-gray-300 underline-offset-4 hover:decoration-gray-900">
-                {project.title}
-              </a>
-            ) : project.title}
-          </h4>
+        <div className="flex items-start gap-3.5">
+          {project.logo && (
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden border border-[var(--matcha-200)] bg-white p-1.5 shadow-2xs">
+              <img src={project.logo} alt={`${project.title} logo`} className="h-full w-full object-contain" />
+            </div>
+          )}
+          <div>
+            {project.status && <p className="mb-1 text-xs italic text-gray-500">{project.status}</p>}
+            <h4 className="text-xl font-bold leading-tight text-gray-900">
+              {project.href ? (
+                <a href={project.href} target="_blank" rel="noreferrer" className="underline decoration-gray-300 underline-offset-4 hover:decoration-gray-900">
+                  {project.title}
+                </a>
+              ) : project.title}
+            </h4>
+          </div>
         </div>
         {project.href ? (
-          <a href={project.href} target="_blank" rel="noreferrer" className={`inline-flex items-center gap-2 rounded px-3 py-2 text-xs font-bold uppercase tracking-wide text-white transition ${project.actionStyle}`}>
+          <a href={project.href} target="_blank" rel="noreferrer" className={`inline-flex items-center gap-2 rounded-none px-3 py-2 text-xs font-bold uppercase tracking-wide text-white transition ${project.actionStyle}`}>
             {project.action}
             <ExternalLink className="h-3.5 w-3.5" />
           </a>
         ) : (
-          <span className={`inline-flex items-center rounded px-3 py-2 text-xs font-bold uppercase tracking-wide text-white ${project.actionStyle}`}>
+          <span className={`inline-flex items-center rounded-none px-3 py-2 text-xs font-bold uppercase tracking-wide text-white ${project.actionStyle}`}>
             {project.action}
           </span>
         )}
